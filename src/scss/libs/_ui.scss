@@ -1,0 +1,210 @@
+.index {
+	padding: 5rem;
+	&__list li {
+		padding-left: 4rem;
+		a {
+			position: relative;
+			transition: color 0.2s linear;
+			&:hover {
+				transition: color 0.2s linear;
+				color: #9c9c9c;
+				&::before {
+					transition: background 0.2s linear;
+					background-color: #9c9c9c;
+				}
+			}
+
+			&::before {
+				content: "";
+				width: 3rem;
+				height: 0.1rem;
+				background-color: $black;
+
+				position: absolute;
+				top: 50%;
+				left: -4rem;
+				z-index: 1;
+				transition: background 0.2s linear;
+			}
+		}
+	}
+}
+.ui-kit {
+	.buttons {
+		margin-bottom: 4rem;
+		&__item {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10rem;
+		}
+		&__wrapper {
+			border: 0.1rem solid #9c9c9c;
+			padding: 5rem;
+
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+		}
+	}
+	.titles {
+		margin-bottom: 4rem;
+		&__wrapper {
+			border: 0.1rem solid #9c9c9c;
+			padding: 5rem;
+
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+	.colors {
+		margin-bottom: 4rem;
+		&__wrapper {
+			border: 0.1rem solid #9c9c9c;
+			padding: 5rem;
+
+			display: flex;
+			align-items: center;
+			gap: 4rem;
+			& .color {
+				width: 8rem;
+				height: 8rem;
+				font-size: 1.2rem;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+	}
+	.other {
+		&__wrapper {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 4rem;
+		}
+		&__item {
+			padding: 5rem;
+			border: 0.1rem solid #9c9c9c;
+		}
+		.other-form {
+			width: 51.5rem;
+		}
+		.other-icons {
+			&__wrapper {
+				display: flex;
+				gap: 4rem;
+
+				span {
+					width: 2.4rem;
+					height: 2.4rem;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 48em) {
+	.index {
+		padding: 5rem;
+		&__list li {
+			padding-left: 4rem;
+			a {
+				position: relative;
+				transition: color 0.2s linear;
+				&:hover {
+					transition: color 0.2s linear;
+					color: #9c9c9c;
+				}
+
+				&::before {
+					content: "";
+					width: 3rem;
+					height: 0.1rem;
+					background-color: $black;
+
+					position: absolute;
+					top: 50%;
+					left: -4rem;
+					z-index: 1;
+				}
+			}
+		}
+	}
+
+	.ui-kit {
+		.buttons {
+			margin-bottom: 4rem;
+			&__item {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10rem;
+			}
+			&__wrapper {
+				border: 0.1rem solid #9c9c9c;
+				padding: 5rem;
+
+				display: flex;
+				flex-direction: column;
+				gap: 4rem;
+			}
+		}
+		.titles {
+			margin-bottom: 4rem;
+			&__wrapper {
+				border: 0.1rem solid #9c9c9c;
+				padding: 5rem;
+
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+			}
+		}
+		.colors {
+			margin-bottom: 4rem;
+			&__wrapper {
+				border: 0.1rem solid #9c9c9c;
+				padding: 5rem;
+
+				display: flex;
+				align-items: center;
+				gap: 4rem;
+				& .color {
+					width: 8rem;
+					height: 8rem;
+					font-size: 1.2rem;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+			}
+		}
+		.other {
+			&__wrapper {
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				gap: 4rem;
+			}
+			&__item {
+				padding: 5rem;
+				border: 0.1rem solid #9c9c9c;
+			}
+			.other-form {
+				width: 100%;
+			}
+			.other-icons {
+				&__wrapper {
+					display: flex;
+					gap: 4rem;
+
+					span {
+						width: 4.8rem;
+						height: 4.8rem;
+					}
+				}
+			}
+		}
+	}
+}

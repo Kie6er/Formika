@@ -1,0 +1,132 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 3.8rem;
+	// .form__footer
+	&__footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.btn {
+			color: $brown;
+			span {
+				border: 0.3rem solid $brown;
+				&::after {
+					background: $brown;
+				}
+			}
+		}
+	}
+}
+.form-main {
+	display: flex;
+	flex-direction: column;
+	gap: 3.8rem;
+}
+.form-label {
+	width: 100%;
+	cursor: pointer;
+}
+.input {
+	display: block;
+	width: 100%;
+	padding-bottom: 1.4rem;
+	border-bottom: 0.1rem solid rgba(114, 114, 114, 0.15);
+
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal; /* 25.2px */
+	text-transform: uppercase;
+
+	&::placeholder {
+		color: $grayText;
+	}
+}
+.input-file {
+	appearance: none;
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.custom-file {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	span {
+		color: $grayText;
+		font-size: 2rem;
+		line-height: normal;
+		text-transform: uppercase;
+	}
+
+	svg {
+		width: 2.4rem;
+		height: 2.4rem;
+	}
+}
+.custom-preview {
+}
+@media (max-width: 48em) {
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 4.8rem;
+		// .form__footer
+		&__footer {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.btn {
+				color: $brown;
+				span {
+					border: 0.4rem solid $brown;
+					&::after {
+						background: $brown;
+					}
+				}
+			}
+		}
+	}
+	.form-label {
+		width: 100%;
+		cursor: pointer;
+	}
+	.form-main {
+		padding-left: 4.4rem;
+		display: flex;
+		flex-direction: column;
+		gap: 4.8rem;
+	}
+	.input {
+		display: block;
+		width: 100%;
+		padding-bottom: 2.8rem;
+		border-bottom: 0.2rem solid rgba(114, 114, 114, 0.15);
+
+		font-size: 3rem;
+		line-height: 140%; /* 25.2px */
+	}
+
+	.custom-file {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+		span {
+			color: $grayText;
+			font-size: 3rem;
+			line-height: normal;
+			text-transform: uppercase;
+		}
+
+		svg {
+			width: 4.8rem;
+			height: 4.8rem;
+		}
+	}
+	.custom-preview {
+	}
+}
