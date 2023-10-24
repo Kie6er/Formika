@@ -1,0 +1,297 @@
+@keyframes btnDots {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateX(2.5rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes btnDotsVertical {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(2.5rem);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.btn {
+	color: #9c9c9c;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%; /* 22px */
+	text-transform: uppercase;
+
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	padding-right: 1.8rem;
+
+	span {
+		position: relative;
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 2rem;
+		border: 0.3rem solid #9c9c9c;
+
+		&::after {
+			content: "";
+			display: block;
+			width: 0.6rem;
+			height: 0.6rem;
+			border-radius: 0.6rem;
+			background: #9c9c9c;
+
+			position: absolute;
+			top: 0.4rem;
+			left: 0.4rem;
+
+			transition: transform 0.5s ease-in-out;
+		}
+	}
+	&.vertical {
+		flex-direction: column;
+		align-items: flex-start;
+		padding-right: 0;
+		padding-bottom: 1.8rem;
+		gap: 1.4rem;
+	}
+
+	&.static {
+		span::after {
+			animation: btnDots 1.5s ease-in-out infinite;
+		}
+		&.vertical {
+			span::after {
+				animation: btnDotsVertical 1.5s ease-in-out infinite;
+			}
+		}
+	}
+	&.hover {
+		span::after {
+			transition: transform 0.5s ease-in-out;
+			transform: translateX(2.5rem);
+		}
+		&:hover {
+			span::after {
+				transform: translateX(0);
+			}
+		}
+
+		&.vertical {
+			span::after {
+				transition: transform 0.5s ease-in-out;
+				transform: translateY(2.5rem);
+			}
+
+			&:hover {
+				span::after {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+}
+.h1 {
+	font-family: "Lobster";
+	font-size: 9.2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 110%;
+}
+.h2 {
+	font-family: "Lobster";
+	font-size: 4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.h3 {
+	font-size: 4.8rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.text-24 {
+	font-size: 2.4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 140%;
+}
+.text-20 {
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.text-18 {
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%;
+}
+.subtitle {
+	display: flex;
+	align-items: center;
+	gap: 2.4rem;
+
+	color: $grayText;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 140%; /* 25.2px */
+	text-transform: uppercase;
+
+	span {
+		display: block;
+		width: 0.6rem;
+		height: 0.6rem;
+		background-color: $grayText;
+		border-radius: 50%;
+	}
+}
+
+@media (max-width: 48em) {
+	@keyframes btnDots {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateX(3.2rem);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes btnDotsVertical {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(3.2rem);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	.btn {
+		font-size: 2.8rem;
+		align-items: center;
+		padding-right: 2.2rem;
+
+		span {
+			width: 3.2rem;
+			height: 3.2rem;
+			border-radius: 50%;
+			border: 0.4rem solid #9c9c9c;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 0.8rem;
+				height: 0.8rem;
+				border-radius: 0.8rem;
+				background: #9c9c9c;
+
+				position: absolute;
+				top: 0.8rem;
+				left: 0.8rem;
+
+				transition: transform 0.5s ease-in-out;
+			}
+		}
+		&.vertical {
+			padding-right: 0;
+			padding-bottom: 2.2rem;
+			gap: 1.6rem;
+		}
+
+		&.static {
+			span::after {
+				animation: btnDots 1.5s ease-in-out infinite;
+			}
+			&.vertical {
+				span::after {
+					animation: btnDotsVertical 1.5s ease-in-out infinite;
+				}
+			}
+		}
+		&.hover {
+			span::after {
+				transition: transform 0.5s ease-in-out;
+				transform: translateX(3.2rem);
+			}
+			&:hover {
+				span::after {
+					transform: translateX(0);
+				}
+			}
+
+			&.vertical {
+				span::after {
+					transition: transform 0.5s ease-in-out;
+					transform: translateY(3.2rem);
+				}
+
+				&:hover {
+					span::after {
+						transform: translateY(0);
+					}
+				}
+			}
+		}
+	}
+	.h1 {
+		font-size: 10rem;
+	}
+	.h2 {
+		font-size: 5rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.h3 {
+		font-size: 6.4rem;
+	}
+	.text-24 {
+		font-size: 4rem;
+	}
+	.text-20 {
+		font-size: 2.8rem;
+		line-height: 110%;
+	}
+	.text-18 {
+		font-size: 3.2rem;
+	}
+	.subtitle {
+		gap: 3.2rem;
+
+		font-size: 2.8rem;
+		font-weight: 400;
+		line-height: normal; /* 25.2px */
+		letter-spacing: 0.112rem;
+		text-transform: uppercase;
+		span {
+			width: 1.2rem;
+			height: 1.2rem;
+		}
+	}
+}

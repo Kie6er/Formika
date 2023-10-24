@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "Montserrat";
+	src:
+		url("./assets/fonts/Montserrat-Light.ttf") format("truetype"),
+		url("./assets/fonts/Montserrat-Light.woff2") format("woff2"),
+		url("./assets/fonts/Montserrat-Light.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat";
+	src:
+		url("./assets/fonts/Montserrat-Regular.ttf") format("truetype"),
+		url("./assets/fonts/Montserrat-Regular.woff2") format("woff2"),
+		url("./assets/fonts/Montserrat-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lobster";
+	src:
+		url("./assets/fonts/Lobster-Regular.ttf") format("truetype"),
+		url("./assets/fonts/Lobster-Regular.woff2") format("woff2"),
+		url("./assets/fonts/Lobster-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

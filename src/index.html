@@ -9,8 +9,161 @@
 
 <body>
 	<!-- <include src="./components/header.html"></include>-->
+	<div class="index">
+		<div style="font-size: 6rem; margin-bottom: 2rem;"><b>Страницы</b></div>
+		<!-- Список страниц -->
+		<ul class="index__list">
+			<li><a href="./main.html" style="font-size: 5rem;">Главная</a></li>
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+			<!-- <li><a href="./main.html" style="font-size: 5rem;">Главная</a></li> -->
+		</ul>
 
-	<a href="./main.html" style="font-size: 5rem;">Главная</a>
+		<hr style="margin-bottom: 4rem; visibility: hidden;">
+
+		<!-- UI-kit -->
+		<div class="ui-kit">
+			<div style="font-size: 6rem;"><b>UI-Kit</b></div>
+
+			<div class="buttons">
+				<div style="font-size: 2rem; margin-bottom: 1rem;">Buttons</div>
+
+				<div class="buttons__wrapper">
+					<div class="buttons__item">
+						<div class="buttons__item-btn">
+							<div style="font-size: 2rem; margin-bottom: 1rem;">Static</div>
+							<div class="btn static">View job <span></span></div>
+						</div>
+						<div class="buttons__item-btn">
+							<div style="font-size: 2rem; margin-bottom: 1rem;">Static vertical</div>
+							<div class="btn static vertical">View job <span></span></div>
+						</div>
+					</div>
+					<div class="buttons__item">
+						<div class="buttons__item-btn">
+							<div style="font-size: 2rem; margin-bottom: 1rem;">Hover button</div>
+							<button class="btn hover">View job <span></span></button>
+						</div>
+						<div class="buttons__item-btn">
+							<div style="font-size: 2rem; margin-bottom: 1rem;">Hover link</div>
+							<a class="btn hover" href="#">View job <span></span></a>
+						</div>
+						<div class="buttons__item-btn">
+							<div style="font-size: 2rem; margin-bottom: 1rem;">Hover vertical</div>
+							<button class="btn hover vertical">View job <span></span></button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="titles">
+				<div style="font-size: 2rem; margin-bottom: 1rem;">Titles</div>
+
+				<div class="titles__wrapper">
+					<div class="h1">H1: Lorem, ipsum dolor.</div>
+					<div class="h2">H2: Lorem, ipsum dolor.</div>
+					<div class="h3">H3: Lorem, ipsum dolor.</div>
+					<div class="text-24">text-24: Lorem, ipsum dolor.</div>
+					<div class="text-20">text-20: Lorem, ipsum dolor.</div>
+					<div class="text-18">text-18: Lorem, ipsum dolor.</div>
+					<div class="subtitle"><span></span>subtitle</div>
+				</div>
+			</div>
+			<div class="colors">
+				<div style="font-size: 2rem; margin-bottom: 1rem;">Colors</div>
+				<div class="colors__wrapper">
+					<div class="color" style="background-color: #FFFEFC; border: .1rem solid #000;">BG</div>
+					<div class="color" style="background-color: #1D1D1D; color: #fff;">Black</div>
+					<div class="color" style="background-color: #fff; border: .1rem solid #000;">White</div>
+					<div class="color" style="background-color: #727272; color: #fff;">Gray text</div>
+					<div class="color" style="background-color: #785B08; color: #fff;">Brown</div>
+					<div class="color" style="background-color: #e0e0e0;">Gray</div>
+					<div class="color" style="background-color: #f8f8f8; border: .1rem solid #000;">Light gray</div>
+				</div>
+			</div>
+			<div class="other">
+				<div style="font-size: 2rem; margin-bottom: 1rem;">Other</div>
+				<div class="other__wrapper">
+					<div class="other__item other-form">
+						<div style="font-size: 2rem; margin-bottom: 4rem;">Form</div>
+						<form class="form">
+							<div class="form-main">
+								<label class="form-label">
+									<input type="text" class="input" placeholder="name">
+								</label>
+								<label class="form-label">
+									<input type="email" class="input" placeholder="email">
+								</label>
+								<label class="form-label">
+									<input type="tel" class="input" placeholder="phone number">
+								</label>
+								<label class="form-label">
+									<input type="text" class="input" placeholder="message">
+								</label>
+							</div>
+							<div class="form__footer">
+								<label class="form-label">
+									<input type="file" class="input-file">
+									<div class="custom-file">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+											viewBox="0 0 24 24" fill="none">
+											<path
+												d="M12.3297 12.1499L9.85969 14.6199C8.48969 15.9899 8.48969 18.1999 9.85969 19.5699C11.2297 20.9399 13.4397 20.9399 14.8097 19.5699L18.6997 15.6799C21.4297 12.9499 21.4297 8.50992 18.6997 5.77992C15.9697 3.04992 11.5297 3.04992 8.79969 5.77992L4.55969 10.0199C2.21969 12.3599 2.21969 16.1599 4.55969 18.5099"
+												stroke="#727272" stroke-width="1.5" stroke-linecap="round"
+												stroke-linejoin="round" />
+										</svg>
+										<span>add file</span>
+									</div>
+									<div class="custom-preview"></div>
+								</label>
+								<button class="btn hover">send<span></span></button>
+							</div>
+						</form>
+					</div>
+					<div class="other__item other-icons">
+						<div style="font-size: 2rem; margin-bottom: 2rem;">Icons</div>
+						<div class="other-icons__wrapper">
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none">
+									<path
+										d="M11.9999 13.43C13.723 13.43 15.1199 12.0331 15.1199 10.31C15.1199 8.58687 13.723 7.19 11.9999 7.19C10.2768 7.19 8.87988 8.58687 8.87988 10.31C8.87988 12.0331 10.2768 13.43 11.9999 13.43Z"
+										stroke="#727272" stroke-width="1.5" />
+									<path
+										d="M3.61971 8.49C5.58971 -0.169998 18.4197 -0.159997 20.3797 8.5C21.5297 13.58 18.3697 17.88 15.5997 20.54C13.5897 22.48 10.4097 22.48 8.38971 20.54C5.62971 17.88 2.46971 13.57 3.61971 8.49Z"
+										stroke="#727272" stroke-width="1.5" />
+								</svg>
+							</span>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+									fill="none">
+									<path
+										d="M12.3297 12.15L9.85969 14.62C8.48969 15.99 8.48969 18.2 9.85969 19.57C11.2297 20.94 13.4397 20.94 14.8097 19.57L18.6997 15.68C21.4297 12.95 21.4297 8.50998 18.6997 5.77998C15.9697 3.04998 11.5297 3.04998 8.79969 5.77998L4.55969 10.02C2.21969 12.36 2.21969 16.16 4.55969 18.51"
+										stroke="#727272" stroke-width="1.5" stroke-linecap="round"
+										stroke-linejoin="round" />
+								</svg>
+							</span>
+							<span>
+								<svg xmlns="http://www.w3.org/2000/svg" width="26" height="29" viewBox="0 0 26 29"
+									fill="none">
+									<path
+										d="M17 12.9999C17 15.2099 15.2111 17 12.9962 17C10.7432 17 8.9285 15.1375 9.00217 12.8673C9.07092 10.7642 10.7996 9.04778 12.9041 9.00113C15.162 8.94833 17 10.7593 17 12.9999Z"
+										fill="#785B08" />
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M0 13.0013C0 5.81767 5.81506 0 12.9948 0C20.1797 0 26 5.81767 26 13.0013C26 18.6718 22.372 23.4909 17.3088 25.2684L13 29L8.69604 25.2727C3.63048 23.4986 0 18.6764 0 13.0013ZM4.66766 13.0013C4.66766 17.6052 8.39477 21.3323 12.9948 21.3323C17.5922 21.3323 21.3323 17.6065 21.3323 13.0013C21.3323 8.39477 17.5935 4.66897 12.9948 4.66897C8.39477 4.66897 4.66766 8.39477 4.66766 13.0013Z"
+										fill="#785B08" />
+								</svg>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>

@@ -4,12 +4,12 @@
 	box-sizing: border-box;
 }
 html {
-	font-family: "Euclid Circular A"; // шрифт по умолчанию по сайту
+	font-family: $font; // шрифт по умолчанию по сайту
 	font-size: 0.5208335vw; // на разрешении 1920 0.520835vw === 10px
 	font-style: normal;
 	font-weight: normal;
 	-webkit-animation: bugfix infinite 1s;
-	line-height: 1.2;
+	line-height: $lineHeight;
 	margin: 0;
 	padding: 0;
 }
@@ -18,11 +18,11 @@ body {
 	font-style: normal;
 	font-weight: normal;
 	-webkit-animation: bugfix infinite 1s;
-	line-height: 1.2;
+	line-height: $lineHeight;
 	margin: 0;
 	padding: 0;
-	color: #262525; // цвет по умолчанию текста по сайту
-	background-color: #ffffff;
+	color: $fontColor; // цвет по умолчанию текста по сайту
+	background-color: $bg;
 }
 
 input,
@@ -73,9 +73,11 @@ p {
 	margin-bottom: 0;
 }
 
-img {
+img,
+svg {
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 	display: block;
 }
 
@@ -99,8 +101,12 @@ ul li {
 }
 
 .container {
-	width: 141rem;
+	width: $containerWidth;
 	margin: 0 auto;
+}
+
+section {
+	margin-bottom: $sectionMargin;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -123,7 +129,7 @@ input[type="number"] {
 	html {
 		font-size: 5px;
 		font-size: 1.5625vw;
-		font-size: calc((100 / 375) * 5vw); // где 375 это ширина моб версии макета
+		font-size: calc((100 / $mobileLayout) * 5vw); // где 375 это ширина моб версии макета
 		-webkit-text-size-adjust: none;
 	}
 
@@ -131,8 +137,12 @@ input[type="number"] {
 		-webkit-text-size-adjust: none;
 	}
 
+	section {
+		margin-bottom: $sectionMarginMobile;
+	}
+
 	.container {
-		padding: 0 4rem; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
+		padding: 0 $containerPadding; // в моб версии отступ от края задаем для всех контейнеров, а там где не нужно можем точечно убрать
 		width: 100%;
 	}
 }
