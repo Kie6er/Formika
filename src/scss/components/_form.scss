@@ -11,7 +11,8 @@
 		.btn {
 			color: $brown;
 			span {
-				border: 0.3rem solid $brown;
+				box-shadow: inset 0 0 0 0.3rem $brown;
+				// border: 0.3rem solid $brown;
 				&::after {
 					background: $brown;
 				}
@@ -83,7 +84,8 @@
 			.btn {
 				color: $brown;
 				span {
-					border: 0.4rem solid $brown;
+					// border: 0.4rem solid $brown;
+					box-shadow: inset 0 0 0 0.4rem $brown;
 					&::after {
 						background: $brown;
 					}

@@ -45,7 +45,8 @@
 		width: 2rem;
 		height: 2rem;
 		border-radius: 2rem;
-		border: 0.3rem solid #9c9c9c;
+		box-shadow: inset 0 0 0 0.3rem #9c9c9c;
+		// border: 0.3rem solid #9c9c9c;
 
 		&::after {
 			content: "";
@@ -56,8 +57,8 @@
 			background: #9c9c9c;
 
 			position: absolute;
-			top: 0.4rem;
-			left: 0.4rem;
+			top: 0.7rem;
+			left: 0.7rem;
 
 			transition: transform 0.5s ease-in-out;
 		}
@@ -94,7 +95,7 @@
 		&.vertical {
 			span::after {
 				transition: transform 0.5s ease-in-out;
-				transform: translateY(2.5rem);
+				transform: translateY(2.4rem);
 			}
 
 			&:hover {
@@ -163,6 +164,14 @@
 	}
 }
 
+.page {
+	overflow: hidden;
+}
+
+main {
+	padding-top: 14.8rem;
+}
+
 @media (max-width: 48em) {
 	@keyframes btnDots {
 		0% {
@@ -170,7 +179,7 @@
 		}
 
 		50% {
-			transform: translateX(3.2rem);
+			transform: translateX(3.6rem);
 		}
 
 		100% {
@@ -184,7 +193,7 @@
 		}
 
 		50% {
-			transform: translateY(3.2rem);
+			transform: translateY(3.6rem);
 		}
 
 		100% {
@@ -195,13 +204,14 @@
 	.btn {
 		font-size: 2.8rem;
 		align-items: center;
-		padding-right: 2.2rem;
+		padding-right: 2.4rem;
 
 		span {
 			width: 3.2rem;
 			height: 3.2rem;
 			border-radius: 50%;
-			border: 0.4rem solid #9c9c9c;
+			box-shadow: inset 0 0 0 0.4rem #9c9c9c;
+			// border: 0.4rem solid #9c9c9c;
 
 			&::after {
 				content: "";
@@ -212,15 +222,15 @@
 				background: #9c9c9c;
 
 				position: absolute;
-				top: 0.8rem;
-				left: 0.8rem;
+				top: 1.2rem;
+				left: 1.2rem;
 
 				transition: transform 0.5s ease-in-out;
 			}
 		}
 		&.vertical {
 			padding-right: 0;
-			padding-bottom: 2.2rem;
+			padding-bottom: 2.4rem;
 			gap: 1.6rem;
 		}
 
@@ -237,7 +247,7 @@
 		&.hover {
 			span::after {
 				transition: transform 0.5s ease-in-out;
-				transform: translateX(3.2rem);
+				transform: translateX(3.6rem);
 			}
 			&:hover {
 				span::after {
@@ -248,7 +258,7 @@
 			&.vertical {
 				span::after {
 					transition: transform 0.5s ease-in-out;
-					transform: translateY(3.2rem);
+					transform: translateY(3.6rem);
 				}
 
 				&:hover {
@@ -293,5 +303,9 @@
 			width: 1.2rem;
 			height: 1.2rem;
 		}
+	}
+
+	main {
+		padding-top: 14.4rem;
 	}
 }
