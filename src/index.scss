@@ -9,3 +9,16 @@
 
 @import "./scss/pages/main";
 @import "./scss/style";
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 48em) {
+	.mobile {
+		display: block;
+	}
+	.desktop {
+		display: none;
+	}
+}
