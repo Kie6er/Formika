@@ -10,13 +10,13 @@ if (ScrollTrigger.isTouch !== 1) {
 	ScrollSmoother.create({
 		wrapper: '.page',
 		content: '.content',
-		smooth: 1.2,
+		smooth: 1.5,
 		effects: true,
 	});
 }
 
 
 import "./index.scss";
-import "./js/pages/home";
+import "./js/pages/main-page";
 import "./js/components/header";
 import * as constants from "./js/utils/constants";
