@@ -9,9 +9,54 @@
 
 <body>
 	<div class="page">
-		<include src="./components/header.html"></include>
-		<main></main>
-		<include src="./components/footer.html"></include>
+		<div class="content">
+			<include src="./components/header.html"></include>
+			<section class="main-banner">
+				<div class="main-banner__inner">
+					<div class="main-banner__title h1">Present your brand on top</div>
+					<div class="main-banner__btn btn static vertical">Scroll Down <span></span></div>
+					<div class="main-banner__circle">
+						<div class="main-banner__circle-small"></div>
+					</div>
+					<div class="main-banner__back">
+						<video autoplay loop preload="auto" muted poster="assets/images/main/video-load.jpg">
+							<source src="./assets/main-video.mp4" type="video/mp4">
+							<source src="./assets/main-video.webm" type="video/webm">
+						</video>
+					</div>
+				</div>
+			</section>
+			<section class="main-solutions">
+				<div class="main-solutions__container container">
+					<div class="main-solutions__inner">
+						<div class="main-solutions__subtitle subtitle"><span></span> about us</div>
+						<div class="main-solutions__wrapper">
+							<div class="main-solutions__wrapper-content">
+								<div class="main-solutions__wrapper-title h1">
+									<div class="main-solutions__wrapper-title--top">We belive in</div>
+									<div class="main-solutions__wrapper-title--bottom">smart solutions</div>
+								</div>
+								<div class="main-solutions__wrapper-description text-24">Our company is a leading
+									provider of
+									premium segment exhibition stand construction services. </div>
+								<div class="main-solutions__wrapper-text text-18">
+									<strong>We excel in designing and building bespoke, high-quality exhibition displays
+										that captivate and impress at various events and exhibitions.</strong>
+									<button class="main-solutions__wrapper-btn btn hover" type="button">Get
+										presentation<span></span></button>
+								</div>
+							</div>
+							<div class="main-solutions__main-back">
+								<div class="main-solutions__main-back--circle"></div>
+								<div class="main-solutions__main-back--overlay"></div>
+							</div>
+						</div>
+						<div class="main-solutions__btn btn static">our cases<span></span></div>
+					</div>
+				</div>
+			</section>
+			<include src="./components/footer.html"></include>
+		</div>
 	</div>
 </body>
 

@@ -27,7 +27,7 @@
 }
 
 .btn {
-	color: #9c9c9c;
+	// color: $grayText;
 	font-size: 2rem;
 	font-style: normal;
 	font-weight: 400;
@@ -45,8 +45,7 @@
 		width: 2rem;
 		height: 2rem;
 		border-radius: 2rem;
-		box-shadow: inset 0 0 0 0.3rem #9c9c9c;
-		// border: 0.3rem solid #9c9c9c;
+		// box-shadow: inset 0 0 0 0.3rem $grayText;
 
 		&::after {
 			content: "";
@@ -54,7 +53,7 @@
 			width: 0.6rem;
 			height: 0.6rem;
 			border-radius: 0.6rem;
-			background: #9c9c9c;
+			// background: $grayText;
 
 			position: absolute;
 			top: 0.7rem;
@@ -165,9 +164,12 @@
 }
 
 .page {
+	will-change: transform;
 	overflow: hidden;
 }
-
+.content {
+	will-change: transform;
+}
 main {
 	padding-top: 14.8rem;
 }
@@ -202,6 +204,7 @@ main {
 	}
 
 	.btn {
+		// color: #9c9c9c;
 		font-size: 2.8rem;
 		align-items: center;
 		padding-right: 2.4rem;
@@ -210,8 +213,7 @@ main {
 			width: 3.2rem;
 			height: 3.2rem;
 			border-radius: 50%;
-			box-shadow: inset 0 0 0 0.4rem #9c9c9c;
-			// border: 0.4rem solid #9c9c9c;
+			// box-shadow: inset 0 0 0 0.4rem #9c9c9c;
 
 			&::after {
 				content: "";
@@ -219,7 +221,7 @@ main {
 				width: 0.8rem;
 				height: 0.8rem;
 				border-radius: 0.8rem;
-				background: #9c9c9c;
+				// background: #9c9c9c;
 
 				position: absolute;
 				top: 1.2rem;
