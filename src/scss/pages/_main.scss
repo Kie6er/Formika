@@ -552,6 +552,7 @@
 	// .main-projects__subtitle
 	&__subtitle {
 		width: 14rem;
+		will-change: transform;
 	}
 	// .main-projects__content
 	&__content {
@@ -567,6 +568,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
+		will-change: transform;
 	}
 
 	&__content-right {
@@ -575,17 +577,41 @@
 		flex-direction: column;
 		gap: 2rem;
 		margin-top: 20rem;
+		will-change: transform;
 	}
 	// .main-projects__content-item
 	&__content-item {
 		height: 49rem;
+		overflow: hidden;
+		will-change: transform;
+		img {
+			transition: transform 0.5s ease-in-out;
+		}
+		&:hover {
+			img {
+				transition: transform 0.5s ease-in-out;
+				transform: scale(1.2);
+			}
+		}
 	}
 	// .main-projects__content-item--null
 	&__content-item--null {
 		height: 18rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 	}
 	// .main-projects__content-item--btn
 	&__content-item--btn {
+		will-change: transform;
+		color: $brown;
+
+		span {
+			box-shadow: inset 0 0 0 0.3rem $brown;
+			&::after {
+				background: $brown;
+			}
+		}
 	}
 	&__btn-wrapper {
 		width: 2rem;
@@ -598,6 +624,7 @@
 		right: -9.6rem;
 		transform: rotate(90deg);
 		color: $grayText;
+		will-change: transform;
 
 		span {
 			box-shadow: inset 0 0 0 0.3rem $grayText;
