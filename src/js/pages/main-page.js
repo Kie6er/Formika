@@ -106,7 +106,7 @@ $(document).ready(function () {
 					scrub: 2,
 					start: "-80% center",
 					end: "top center",
-					markers: true
+					// markers: true
 				}
 			})
 		}
