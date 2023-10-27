@@ -48,67 +48,105 @@ $(document).ready(function () {
 		});
 
 		for (let i = 0; i < leftItems.length - 1; i++) {
-			gsap.fromTo('.main-projects__content-left', { y: "20rem" }, {
-				y: "0rem",
-				scrollTrigger: {
-					trigger: '.main-projects',
-					start: "-10% center",
-					end: "top center",
-					scrub: 2,
-					// markers: true,
-				}
-			})
-			gsap.fromTo(leftItems[i], { y: "0rem" }, {
-				y: "-65rem",
-				scrollTrigger: {
-					trigger: leftItems[i],
-					// markers: true,
-					start: "110% center",
-					end: "140% center",
-					scrub: 2
-				}
-			})
-			gsap.fromTo(leftItems[i + 1], { y: "10rem" }, {
-				y: "0rem",
-				scrollTrigger: {
-					trigger: leftItems[i],
-					scrub: 2,
-					start: "top center",
-					end: "50% center",
-				}
-			})
+			let leftTm = gsap.timeline();
+			leftTm
+				.fromTo('.main-projects__content-left', { y: "20rem" }, {
+					y: "0rem",
+					delay: 2,
+					scrollTrigger: {
+						trigger: '.main-projects',
+						start: "-10% center",
+						end: "-2% center",
+						scrub: 3,
+						// markers: {
+						// 	fontSize: "3rem"
+						// }
+					}
+				})
+				.fromTo(leftItems[i], { y: "0rem" }, {
+					y: "-50rem",
+					duration: 2,
+					scrollTrigger: {
+						trigger: leftItems[i],
+						start: "70% center",
+						end: "bottom center",
+						scrub: 3,
+						// markers: {
+						// 	fontSize: "3rem"
+						// }
+					}
+				})
+				.add(swipe);
+
+			function swipe() {
+				leftItems.forEach((el, i) => {
+					if (i !== 0) {
+						leftTm.to(leftItems[i], {
+							duration: 1,
+							startAt: {
+								y: "20rem",
+							},
+							y: "0rem",
+							scrollTrigger: {
+								trigger: leftItems[i],
+								start: `${- leftItems[i].clientHeight * 1.8} center`,
+								end: `${- leftItems[i].clientHeight * 1.2} center`,
+								scrub: 3,
+								// markers: {
+								// 	fontSize: "3rem"
+								// }
+							}
+						})
+					}
+				})
+			}
+
+
 		}
 		for (let i = 0; i < rightItems.length - 1; i++) {
-			gsap.fromTo('.main-projects__content-right', { y: "20rem" }, {
+			let rightTm = gsap.timeline();
+			rightTm.fromTo('.main-projects__content-right', { y: "20rem" }, {
 				y: "0rem",
 				scrollTrigger: {
 					trigger: '.main-projects',
-					start: "top center",
-					end: "10% center",
+					start: "-2% center",
+					end: "6% center",
 					scrub: 2,
 					// markers: true,
 				}
 			})
-			gsap.fromTo(rightItems[i], { y: "0rem" }, {
-				y: "-65rem",
+			rightTm.fromTo(rightItems[i], { y: "0rem" }, {
+				y: "-50rem",
 				scrollTrigger: {
 					trigger: leftItems[i],
 					// markers: true,
-					start: "110% center",
-					end: "140% center",
-					scrub: 2
-				}
-			})
-			gsap.fromTo(rightItems[i + 1], { y: "10rem" }, {
-				y: "0rem",
-				scrollTrigger: {
-					trigger: rightItems[i],
+					start: "70% center",
+					end: "bottom center",
 					scrub: 2,
-					start: "-80% center",
-					end: "top center",
-					// markers: true
 				}
-			})
+			}).add(swipeR)
+			function swipeR() {
+				rightItems.forEach((el, i) => {
+					if (i !== 0) {
+						rightTm.to(rightItems[i], {
+							duration: 1,
+							startAt: {
+								y: "20rem",
+							},
+							y: "0rem",
+							scrollTrigger: {
+								trigger: rightItems[i],
+								scrub: 2,
+								start: `${- leftItems[i].clientHeight * 2.2} center`,
+								end: `${- leftItems[i].clientHeight * 1.6} center`,
+								// markers: true
+							}
+						})
+					}
+
+				})
+			}
+
 		}
 	}
 
