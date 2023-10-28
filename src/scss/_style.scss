@@ -165,8 +165,10 @@
 
 .page {
 	will-change: transform;
-	overflow: hidden;
+	overflow: visible;
+	position: relative;
 }
+
 .content {
 	will-change: transform;
 }
