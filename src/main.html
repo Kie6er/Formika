@@ -8,9 +8,10 @@
 </head>
 
 <body>
+	<include src="./components/header.html"></include>
+
 	<div class="page">
 		<div class="content">
-			<include src="./components/header.html"></include>
 			<section class="main-banner">
 				<div class="main-banner__inner">
 					<div class="main-banner__title h1">Present your brand on top</div>
@@ -53,7 +54,9 @@
 								<div class="main-solutions__main-back--overlay"></div>
 							</div>
 						</div>
-						<div class="main-solutions__btn btn static">our cases<span></span></div>
+						<div class="main-solutions__btn-wrapper">
+							<div class="main-solutions__btn btn static">our cases<span></span></div>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -75,7 +78,7 @@
 								<div class="main-projects__content-item">
 									<img src="assets/images/main/main-8.webp" alt="">
 								</div>
-								<div class="main-projects__content-item--null">
+								<div class="main-projects__content-item--null desktop">
 									<a class="main-projects__content-item--btn btn hover" href="#">show
 										more<span></span></a>
 								</div>
@@ -92,6 +95,10 @@
 								</div>
 								<div class="main-projects__content-item">
 									<img src="assets/images/main/main-4.webp" alt="">
+								</div>
+								<div class="main-projects__content-item--null mobile">
+									<a class="main-projects__content-item--btn btn hover" href="#">show
+										more<span></span></a>
 								</div>
 							</div>
 						</div>

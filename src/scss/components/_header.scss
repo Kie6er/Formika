@@ -4,8 +4,38 @@
 	left: 0;
 	z-index: 1000;
 	width: 100%;
-
+	transition: background 0.5s linear;
 	&.scroll {
+		transition: background 0.5s linear;
+		background: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(2.4rem);
+	}
+	&.black {
+		.header__btn {
+			color: $black;
+			&::after {
+				background: $black;
+			}
+		}
+		.header__nav {
+			color: $black;
+		}
+		.header__logo {
+			.white-logo {
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+			}
+
+			.black-logo {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.black-logo {
+		opacity: 0;
+		visibility: hidden;
 	}
 	// .header__inner
 	&__inner {
@@ -63,9 +93,14 @@
 
 @media (max-width: 48em) {
 	.header {
+		width: 100vw;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
 		// .header__inner
 		&__inner {
-			align-items: flex-end;
+			align-items: flex-start;
 			padding: 4rem 0;
 		}
 		// .header__logo
