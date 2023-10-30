@@ -162,7 +162,22 @@
 		border-radius: 50%;
 	}
 }
+.error {
+	position: relative;
+}
+.error-text {
+	color: #f00;
+	font-size: 1.2rem;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%; /* 16.8px */
+	text-transform: uppercase;
 
+	position: absolute;
+	bottom: -2.4rem;
+	left: 0;
+	z-index: 1;
+}
 .page {
 	will-change: transform;
 	overflow: visible;

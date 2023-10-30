@@ -4,11 +4,20 @@
 	left: 0;
 	z-index: 1000;
 	width: 100%;
-	transition: background 0.5s linear;
+	transition:
+		background 0.5s linear,
+		padding 0.5s linear;
 	&.scroll {
-		transition: background 0.5s linear;
+		transition:
+			background 0.5s linear,
+			padding 0.5s linear;
 		background: rgba(255, 255, 255, 0.05);
 		backdrop-filter: blur(2.4rem);
+
+		.header__inner {
+			transition: padding 0.5s linear;
+			padding: 4rem 0;
+		}
 	}
 	&.black {
 		.header__btn {
@@ -43,6 +52,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 5rem 0;
+		transition: padding 0.5s linear;
 	}
 	// .header__logo
 	&__logo {

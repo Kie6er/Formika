@@ -28,6 +28,9 @@
 		display: flex;
 		gap: 28.1rem;
 	}
+	&__copyright {
+		color: $grayText;
+	}
 	// .footer__menu-item
 	&__menu-item {
 		display: flex;
@@ -40,6 +43,7 @@
 	}
 	// .footer__menu-text
 	&__menu-text {
+		color: $grayText;
 		margin-top: 1.6rem;
 	}
 }
