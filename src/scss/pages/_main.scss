@@ -6,19 +6,6 @@
 		width: 100%;
 		height: 108rem;
 	}
-	// .main-banner__title
-	&__title {
-		color: $white;
-		text-align: center;
-		width: 45rem;
-
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 2;
-
-		transform: translate(-50%, -50%);
-	}
 	// .main-banner__btn
 	&__btn {
 		color: $white;
@@ -33,30 +20,6 @@
 		bottom: 7.8rem;
 		left: 10rem;
 		z-index: 500;
-	}
-	&__circle {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		z-index: 1;
-		transform: translate(-50%, -50%);
-
-		width: 172.3rem;
-		height: 172.3rem;
-		border-radius: 50%;
-
-		box-shadow: inset 0 0 0 30.9rem rgba(#0b0b0b, 0.4);
-
-		&-small {
-			border-radius: 50%;
-			width: 56.2rem;
-			height: 56.2rem;
-			background: rgba(#0b0b0b, 0.4);
-		}
 	}
 	// .main-banner__back
 	&__back {
@@ -589,15 +552,36 @@
 	&__content-item {
 		height: 49rem;
 		overflow: hidden;
+		position: relative;
 		will-change: transform;
 		img {
+			position: relative;
+			z-index: 2;
 			will-change: object-position;
-			transition: transform 0.5s ease-in-out;
+			transition:
+				transform 0.5s ease-in-out,
+				opacity 0.5s linear;
+		}
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 		&:hover {
 			img {
 				transition: transform 0.5s ease-in-out;
 				transform: scale(1.1);
+			}
+
+			video ~ img {
+				transition: opacity 0.5s linear;
+				opacity: 0;
+				transform: none;
 			}
 		}
 	}
@@ -648,14 +632,6 @@
 		&__inner {
 			height: 160rem;
 		}
-		// .main-banner__title
-		&__title {
-			width: 45rem;
-			top: 50%;
-			left: 50%;
-
-			transform: translate(-50%, -50%);
-		}
 		// .main-banner__btn
 		&__btn {
 			span {
@@ -663,17 +639,6 @@
 			}
 			bottom: 6.4rem;
 			left: 3.2rem;
-		}
-		&__circle {
-			width: 146.4rem;
-			height: 146.4rem;
-
-			box-shadow: inset 0 0 0 26.2rem rgba(#0b0b0b, 0.4);
-
-			&-small {
-				width: 47.8rem;
-				height: 47.8rem;
-			}
 		}
 	}
 	.main-solutions {
@@ -910,6 +875,9 @@
 		// .main-map__content
 		&__content {
 			position: relative;
+			overflow: hidden;
+			width: 100vw;
+			left: -3.2rem;
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
