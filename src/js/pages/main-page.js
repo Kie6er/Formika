@@ -90,26 +90,27 @@ $(document).ready(function () {
 							scrollTrigger: {
 								trigger: leftItems[i],
 								toggleActions: "play none reverse none",
-								start: `${- leftItems[i].clientHeight * 1.8} center`,
+								start: `${- leftItems[i].clientHeight * 2.4} center`,
 								end: `${- leftItems[i].clientHeight * 1.2} center`,
 								scrub: 2,
 								// markers: {
-								// 	fontSize: "3rem"
+								// 	fontSize: "1rem"
 								// }
 							}
 						})
 					}
 					leftTm.to(leftItemsImg[i], {
 						startAt: {
-							objectPosition: "50% 20%",
+							objectPosition: "50% 80%",
 						},
-						objectPosition: "50% 50%",
+						objectPosition: "50% 20%",
 						scrollTrigger: {
 							trigger: leftItems[i],
-							start: `${- leftItems[i].clientHeight * 0.6} center`,
-							end: `${- leftItems[i].clientHeight * 0.4} center`,
+							start: `top bottom`,
+							end: `bottom top`,
 							toggleActions: "play none reverse none",
 							scrub: 2,
+							// markers: true
 						}
 					})
 					return (leftTm)
@@ -135,7 +136,9 @@ $(document).ready(function () {
 					y: "-50rem",
 					scrollTrigger: {
 						trigger: leftItems[i],
-						// markers: true,
+						// markers: {
+						// 	fontSize: "3rem"
+						// },
 						start: "50% center",
 						end: "70% center",
 						toggleActions: "play none reverse none",
@@ -163,13 +166,13 @@ $(document).ready(function () {
 					}
 					rightTm.to(rightItemsImg[i], {
 						startAt: {
-							objectPosition: "50% 20%",
+							objectPosition: "50% 80%",
 						},
-						objectPosition: "50% 50%",
+						objectPosition: "50% 20%",
 						scrollTrigger: {
 							trigger: leftItems[i],
-							start: `${- leftItems[i].clientHeight * 0.6} center`,
-							end: `${- leftItems[i].clientHeight * 0.4} center`,
+							start: `top bottom`,
+							end: `bottom top`,
 							toggleActions: "play none reverse none",
 							scrub: 2,
 						}
