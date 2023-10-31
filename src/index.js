@@ -21,11 +21,9 @@ phone.forEach(function (element) {
 })
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-if (ScrollTrigger.isTouch !== 1) {
-	ScrollSmoother.create({
-		wrapper: '.page',
-		content: '.content',
-		smooth: 3,
-		effects: true,
-	});
-}
+ScrollSmoother.create({
+	wrapper: '.page',
+	content: '.content',
+	smooth: 3,
+	effects: true,
+});
