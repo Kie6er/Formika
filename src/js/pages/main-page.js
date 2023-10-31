@@ -183,25 +183,25 @@ $(document).ready(function () {
 		}
 	}
 
-	projectVideoPlay();
+	videoPlay();
 
-	function projectVideoPlay() {
+	function videoPlay() {
 		//Получаем видео
 		let project = $(".main-projects__content-item");
-
+		let mainBannerVideo = document.querySelector('.main-banner__back');
+		if ($(mainBannerVideo).find('video').length > 0) {
+			mainBannerVideo.querySelector('video').play();
+		};
 		for (var i = 0; i < project.length; i++) {
-			//Добавляем обработчик события наведения мыши
-			project[i].addEventListener("mouseenter", function (e) { MouseEnter(e.target); });
-			//Добавляем обработчик события выхода курсора за границы элемента
-			project[i].addEventListener("mouseleave", function (e) { MouseLeave(e.target); });
+			project[i].addEventListener("mouseenter", e => { MouseEnter(e.target); });
+			project[i].addEventListener("mouseleave", e => { MouseLeave(e.target); });
 		}
-	}
+	};
 	function MouseEnter(e) {
-		// console.log($(e).children('video'))
 		if ($(e).find('video').length > 0) {
 			e.querySelector('video').play();
 		}
-	}
+	};
 	function MouseLeave(e) {
 		if ($(e).find('video').length > 0) {
 			setTimeout(function () {
@@ -210,7 +210,7 @@ $(document).ready(function () {
 			}, 500)
 		}
 
-	}
+	};
 
 	$('.main-map__map-marks--item').on('mouseover', function (evt) {
 		$('.main-map__map-marks--item').each(function (index, el) {
