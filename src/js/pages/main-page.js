@@ -181,6 +181,36 @@ $(document).ready(function () {
 				})
 			}
 		}
+	} else {
+		const projectMobileImage = gsap.utils.toArray('.main-projects__content-item img');
+		gsap.to('.main-solutions__main-back', {
+			startAt: {
+				scale: 0.45
+			},
+			scale: 1,
+			scrollTrigger: {
+				trigger: '.main-solutions',
+				start: "top center",
+				end: "center center",
+				scrub: 2,
+			}
+		})
+
+		projectMobileImage.forEach((el, i) => {
+			gsap.to(projectMobileImage[i], {
+				startAt: {
+					objectPosition: "50% 80%",
+				},
+				objectPosition: "50% 20%",
+				scrollTrigger: {
+					trigger: '.main-projects',
+					start: `top bottom`,
+					end: `bottom top`,
+					toggleActions: "play none reverse none",
+					scrub: 2,
+				}
+			})
+		})
 	}
 
 	videoPlay();
@@ -188,9 +218,11 @@ $(document).ready(function () {
 	function videoPlay() {
 		//Получаем видео
 		let project = $(".main-projects__content-item");
-		let mainBannerVideo = document.querySelector('.main-banner__back');
-		if ($(mainBannerVideo).find('video').length > 0) {
-			mainBannerVideo.querySelector('video').play();
+		let mainBannerVideo = document.querySelector('.main-banner__back').querySelector('video');
+		let isPlaying = mainBannerVideo.currentTime > 0 && !mainBannerVideo.paused && !mainBannerVideo.ended && mainBannerVideo.readyState > mainBannerVideo.HAVE_CURRENT_DATA;
+
+		if ($(mainBannerVideo).find('video').length > 0 && !isPlaying) {
+			mainBannerVideo.play();
 		};
 		for (var i = 0; i < project.length; i++) {
 			project[i].addEventListener("mouseenter", e => { MouseEnter(e.target); });
