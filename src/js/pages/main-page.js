@@ -61,25 +61,18 @@ $(document).on('DOMContentLoaded', function () {
 					end: "-2% center",
 					toggleActions: "play none reverse none",
 					scrub: 3,
-					// markers: {
-					// 	fontSize: "3rem"
-					// }
 				}
-			})
-				.add(swipe)
-				.to(leftItems[i], {
+			}).add(swipe)
+				.to(leftItems[0], {
 					y: "-50rem",
 					scrollTrigger: {
-						trigger: leftItems[i],
+						trigger: leftItems[0],
 						start: "50% center",
 						end: "70% center",
 						toggleActions: "play none reverse none",
 						scrub: 3,
-						// markers: {
-						// 	fontSize: "3rem"
-						// }
 					}
-				});
+				})
 			function swipe() {
 				leftItems.forEach((el, i) => {
 					if (i !== 0) {
@@ -94,9 +87,21 @@ $(document).on('DOMContentLoaded', function () {
 								start: `${- leftItems[i].clientHeight * 2.4} center`,
 								end: `${- leftItems[i].clientHeight * 1.2} center`,
 								scrub: 2,
-								// markers: {
-								// 	fontSize: "1rem"
-								// }
+							}
+						})
+					}
+					if (i !== 0 && i !== (leftItems.length - 1)) {
+						leftTm.to(leftItems[i], {
+							startAt: {
+								y: "0rem"
+							},
+							y: "-50rem",
+							scrollTrigger: {
+								trigger: leftItems[i],
+								start: "40% center",
+								end: "60% center",
+								toggleActions: "play none reverse none",
+								scrub: 3,
 							}
 						})
 					}
@@ -111,7 +116,6 @@ $(document).on('DOMContentLoaded', function () {
 							end: `bottom top`,
 							toggleActions: "play none reverse none",
 							scrub: 2,
-							// markers: true
 						}
 					})
 					return (leftTm)
@@ -129,17 +133,12 @@ $(document).on('DOMContentLoaded', function () {
 					end: "6% center",
 					scrub: 3,
 					toggleActions: "play none reverse none",
-					// markers: true,
 				}
-			})
-				.add(swipeR)
-				.to(rightItems[i], {
+			}).add(swipeR)
+				.to(rightItems[0], {
 					y: "-50rem",
 					scrollTrigger: {
-						trigger: leftItems[i],
-						// markers: {
-						// 	fontSize: "3rem"
-						// },
+						trigger: leftItems[0],
 						start: "50% center",
 						end: "70% center",
 						toggleActions: "play none reverse none",
@@ -161,7 +160,21 @@ $(document).on('DOMContentLoaded', function () {
 								toggleActions: "play none reverse none",
 								start: `${- leftItems[i].clientHeight * 2.2} center`,
 								end: `${- leftItems[i].clientHeight * 1.6} center`,
-								// markers: true
+							}
+						})
+					}
+					if (i !== 0 && i !== (rightItems.length - 1)) {
+						rightTm.to(rightItems[i], {
+							startAt: {
+								y: "0rem"
+							},
+							y: "-50rem",
+							scrollTrigger: {
+								trigger: leftItems[i],
+								start: "40% center",
+								end: "60% center",
+								toggleActions: "play none reverse none",
+								scrub: 3,
 							}
 						})
 					}
