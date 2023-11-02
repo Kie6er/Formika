@@ -444,17 +444,14 @@
 				position: absolute;
 				z-index: 1;
 
-				svg {
-					transform-origin: center bottom;
-					transition: transform 0.4s ease-in-out;
-					will-change: transform;
-				}
+				transform-origin: center bottom;
+				transition: transform 0.4s ease-in-out;
+				will-change: transform;
+
 				&.active {
-					svg {
-						transition: transform 0.4s ease-in-out;
-						transform: scale(2.5);
-						will-change: transform;
-					}
+					transition: transform 0.4s ease-in-out;
+					transform: scale(2.5);
+					will-change: transform;
 				}
 
 				&:nth-child(1) {
@@ -877,19 +874,18 @@
 	.main-map {
 		// .main-map__title
 		&__title {
-			width: 70%;
+			width: 80%;
 			margin-bottom: 9.6rem;
 		}
 		// .main-map__content
 		&__content {
 			position: relative;
-			overflow: hidden;
 			width: 100vw;
 			left: -3.2rem;
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
-			height: 67.6rem;
+			height: 113rem;
 		}
 		// .main-map__subtitle
 		&__subtitle {
@@ -902,20 +898,20 @@
 		// .main-map__map
 		&__map {
 			position: absolute;
-			left: -42.4rem;
 			top: 0;
+			left: 0;
+			overflow-x: scroll;
 			z-index: 1;
+			scroll-behavior: smooth;
 
-			width: 138.2rem;
-			height: 67.6rem;
+			width: 100%;
+			height: 100%;
 			&-info {
 				position: static;
-				padding: 6.4rem;
-				background: $lightGray;
-				margin-top: 6.4rem;
+				margin-bottom: 4rem;
 				&--tag {
 					gap: 1.6rem;
-					margin-bottom: 3.2rem;
+					margin-bottom: 1.6rem;
 
 					svg {
 						width: 4.8rem;
@@ -924,52 +920,60 @@
 				}
 			}
 			&-marks {
-				top: 2.4rem;
-				left: 47rem;
-				width: 59.6rem;
-				height: 37.4rem;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
 				&--item {
 					width: 5.6rem;
 					height: 5.8rem;
 					&.active {
-						svg {
-							transform: scale(2);
-						}
+						transform: scale(2);
 					}
 
 					&:nth-child(1) {
-						top: 0;
-						left: 3.6rem;
+						top: 7rem;
+						left: 84rem;
 					}
 					&:nth-child(2) {
-						top: 6.2rem;
-						left: 0;
+						top: 16rem;
+						left: 78rem;
 					}
 					&:nth-child(3) {
-						top: 10.6rem;
-						left: 22.2rem;
+						top: 21.6rem;
+						left: 112rem;
 					}
 					&:nth-child(4) {
-						bottom: 0;
-						left: 17.2rem;
+						bottom: 52rem;
+						left: 107.2rem;
 					}
 					&:nth-child(5) {
-						bottom: 4.2rem;
-						left: 32.2rem;
+						bottom: 58.2rem;
+						left: 129.2rem;
 					}
 					&:nth-child(6) {
-						bottom: 6.4rem;
+						bottom: 58.4rem;
 						left: unset;
-						right: 9rem;
+						right: 84rem;
 					}
 					&:nth-child(7) {
-						right: 0;
-						top: 13.9rem;
+						right: 53rem;
+						top: 24.9rem;
 					}
 					&:nth-child(8) {
-						top: 5.3rem;
-						right: 3.3rem;
+						top: 12.3rem;
+						right: 62.3rem;
 					}
+				}
+			}
+
+			&-bg {
+				position: relative;
+				width: 228rem;
+				height: 100%;
+
+				img {
+					object-fit: contain;
 				}
 			}
 		}
