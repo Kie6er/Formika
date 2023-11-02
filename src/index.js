@@ -12,7 +12,6 @@ import "./js/pages/main-page";
 import "./js/components/header";
 import "./js/components/form";
 import * as constants from "./js/utils/constants";
-
 const phone = document.querySelectorAll('[type=tel]');
 phone.forEach(function (element) {
 	const mask = IMask(element, {
@@ -21,6 +20,7 @@ phone.forEach(function (element) {
 })
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
 ScrollSmoother.create({
 	wrapper: '.page',
 	content: '.content',

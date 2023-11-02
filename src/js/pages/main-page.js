@@ -5,7 +5,8 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "../utils/ScrollSmoother.min";
-$(document).ready(function () {
+$(document).on('DOMContentLoaded', function () {
+	// GSAP анимации
 	if (ScrollTrigger.isTouch !== 1) {
 		const tl1 = gsap.timeline({
 			defaults: {
@@ -212,9 +213,8 @@ $(document).ready(function () {
 			})
 		})
 	}
-
+	// Воиспрозвидение видео
 	videoPlay();
-
 	function videoPlay() {
 		//Получаем видео
 		let project = $(".main-projects__content-item");
@@ -243,11 +243,24 @@ $(document).ready(function () {
 		}
 
 	};
+	// Карта
+	let mapTarget = $('.main-map__map-marks--item');
+	let overflowBlockMap = document.querySelector('.main-map__map');
 
-	$('.main-map__map-marks--item').on('mouseover', function (evt) {
-		$('.main-map__map-marks--item').each(function (index, el) {
+	mapTarget.on('mouseover', function (evt) {
+		mapTarget.each(function (index, el) {
 			$(el).removeClass('active');
 		})
-		$(evt.currentTarget).addClass('active')
+		$(evt.currentTarget).addClass('active');
+
+		if (window.outerWidth <= 768) {
+			evt.currentTarget.scrollIntoView({ block: "nearest", behavior: "smooth", inline: "center" });
+		}
+	});
+
+	overflowBlockMap.scrollTo({
+		top: 0,
+		left: 500,
+		behavior: "smooth"
 	});
 });
