@@ -8,7 +8,7 @@ $(document).ready(function () {
 		} else {
 			$('.header').removeClass('scroll');
 		}
-		if (($(window).scrollTop()) >= $('.main-banner').outerHeight()) {
+		if (($(window).scrollTop()) >= $('.banner-back').outerHeight()) {
 			$('.header').addClass('black');
 		} else {
 			$('.header').removeClass('black');

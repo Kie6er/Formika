@@ -1,0 +1,180 @@
+.project-banner {
+	// .project-banner__inner
+	&__inner {
+		position: relative;
+		width: 100%;
+		height: 108rem;
+	}
+	// .project-banner__btn
+	&__btn {
+		color: $white;
+
+		span {
+			box-shadow: inset 0 0 0 0.3rem $white;
+			&::after {
+				background: $white;
+			}
+		}
+		position: absolute;
+		bottom: 7.8rem;
+		left: 10rem;
+		z-index: 1;
+	}
+	// .project-banner__content
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+
+		width: 96rem;
+		height: 100%;
+		padding: 8rem;
+		background: rgba(255, 255, 255, 0.05);
+		backdrop-filter: blur(2.4rem);
+
+		color: $white;
+	}
+	// .project-banner__content-main
+	&__content-main {
+		flex: 1;
+		margin-top: 24.3rem;
+	}
+	// .project-banner__title
+	&__title {
+		margin-bottom: 4rem;
+	}
+	// .project-banner__description
+	&__description {
+		width: 63.6rem;
+		text-transform: uppercase;
+	}
+	// .project-banner__content-footer
+	&__content-footer {
+		text-transform: uppercase;
+	}
+	// .project-banner__back
+	&__back {
+		width: 100%;
+		height: 100%;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
+			background: rgba(#0b0b0b, 0.4);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+		}
+
+		video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 48em) {
+	.project-banner {
+		// .project-banner__inner
+		&__inner {
+			position: relative;
+			width: 100%;
+			height: 108rem;
+		}
+		// .project-banner__btn
+		&__btn {
+			color: $white;
+
+			span {
+				box-shadow: inset 0 0 0 0.3rem $white;
+				&::after {
+					background: $white;
+				}
+			}
+			position: absolute;
+			bottom: 7.8rem;
+			left: 10rem;
+			z-index: 1;
+		}
+		// .project-banner__content
+		&__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 2;
+
+			width: 96rem;
+			height: 100%;
+			padding: 8rem;
+			will-change: backdrop-filter;
+			background: rgba(255, 255, 255, 0.05);
+			backdrop-filter: blur(2.4rem);
+
+			color: $white;
+		}
+		// .project-banner__content-main
+		&__content-main {
+			flex: 1;
+			margin-top: 24.3rem;
+		}
+		// .project-banner__title
+		&__title {
+			margin-bottom: 4rem;
+		}
+		// .project-banner__description
+		&__description {
+			width: 63.6rem;
+			text-transform: uppercase;
+		}
+		// .project-banner__content-footer
+		&__content-footer {
+			text-transform: uppercase;
+		}
+		// .project-banner__back
+		&__back {
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 0;
+
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				display: block;
+				background: rgba(#0b0b0b, 0.4);
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
+			}
+
+			video {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+}
