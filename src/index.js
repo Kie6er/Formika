@@ -8,9 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "./js/utils/ScrollSmoother.min";
 
 import "./index.scss";
-import "./js/pages/main-page";
 import "./js/components/header";
 import "./js/components/form";
+import "./js/pages/main-page";
+
 import * as constants from "./js/utils/constants";
 const phone = document.querySelectorAll('[type=tel]');
 phone.forEach(function (element) {
