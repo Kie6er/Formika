@@ -11,6 +11,7 @@ import "./index.scss";
 import "./js/components/header";
 import "./js/components/form";
 import "./js/pages/main-page";
+import "./js/pages/project-detail";
 
 import * as constants from "./js/utils/constants";
 const phone = document.querySelectorAll('[type=tel]');
