@@ -2,20 +2,23 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+window.addEventListener('load', function () {
+	ScrollTrigger.refresh();
+});
+window.addEventListener('resize', function () {
+	ScrollTrigger.refresh();
+})
+
 $(document).ready(function () {
 	ScrollTrigger.refresh();
-	window.addEventListener('load', function () {
-		ScrollTrigger.refresh();
-	});
-	window.addEventListener('resize', function () {
-		ScrollTrigger.refresh();
-	})
 
 	if ($('.project-content').length > 0) {
+		// Анимация gsap
 		if (ScrollTrigger.isTouch !== 1) {
 			let projectItemSmallTop = gsap.utils.toArray('.small--top');
 			let projectItemSmallBottom = gsap.utils.toArray('.small--bottom');
 			let projectItemBig = gsap.utils.toArray('.item-big-anim');
+			let projectItemImage = gsap.utils.toArray('.project-content__item img')
 
 			let timelineProject = gsap.timeline();
 
@@ -84,9 +87,43 @@ $(document).ready(function () {
 					// markers: true
 					toggleActions: "play complete reverse play"
 				}
-			})
-		} else {
+			}).add(projectImageAnim)
+
+			function projectImageAnim() {
+				projectItemImage.forEach(el => {
+					timelineProject.to(el, {
+						startAt: {
+							objectPosition: "50% 80%",
+						},
+						objectPosition: "50% 20%",
+						scrollTrigger: {
+							trigger: '.project-content',
+							start: `top bottom`,
+							end: `bottom top`,
+							// toggleActions: "play complete complete complete",
+							scrub: 2,
+						}
+					});
+				})
+				return (timelineProject)
+			}
+		}
+		if (ScrollTrigger.isTouch === 1) {
 
 		}
+	}
+
+	if ($('.project-video').length > 0) {
+		$('.project-video').on('click', function () {
+			if ($('.project-video__button-play').hasClass('active')) {
+				$('.project-video__button-pause').addClass('active');
+				$('.project-video__button-play').removeClass('active');
+				$(this).find('video')[0].play();
+			} else if ($('.project-video__button-pause').hasClass('active')) {
+				$('.project-video__button-pause').removeClass('active');
+				$('.project-video__button-play').addClass('active');
+				$(this).find('video')[0].pause();
+			}
+		})
 	}
 })
