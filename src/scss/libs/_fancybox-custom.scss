@@ -1,0 +1,90 @@
+.fancybox__toolbar {
+	display: none;
+}
+
+.fancybox__footer {
+	display: none;
+}
+
+.fancybox__carousel {
+	width: 100%;
+	height: 100%;
+}
+
+.fancybox__thumbs {
+	display: none;
+}
+
+.fancybox__content {
+	width: 100% !important;
+	height: 100% !important;
+
+	img,
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+}
+.fancybox__container:not(.is-compact) .fancybox__slide.has-close-btn {
+	padding: 0;
+}
+
+.fancybox__slide {
+	padding: 5rem 5rem 10rem;
+	margin: 0;
+}
+
+.f-button {
+	width: 6rem;
+	height: 6rem;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(0.48rem);
+}
+
+.f-button.is-close-btn {
+	--f-button-svg-stroke-width: 2;
+	position: absolute;
+	top: unset;
+	bottom: 2rem;
+	right: 50%;
+	transform: translateX(50%);
+	z-index: 40;
+}
+
+.f-button svg {
+	width: 2.3rem;
+	height: 1.7rem;
+	fill: #fff;
+	stroke: currentColor;
+	stroke-width: 0;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	transition: none;
+	transform: var(--f-button-transform);
+	filter: var(--f-button-svg-filter);
+	pointer-events: none;
+}
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .f-carousel__nav .f-button.is-next,
+.is-horizontal .fancybox__nav .f-button.is-prev,
+.is-horizontal .fancybox__nav .f-button.is-next {
+	bottom: 2rem;
+	top: unset;
+	transform: unset;
+}
+.f-button:hover:not([disabled]) {
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-next,
+.is-horizontal .fancybox__nav .f-button.is-next {
+	right: 10rem;
+}
+
+.is-horizontal .f-carousel__nav .f-button.is-prev,
+.is-horizontal .fancybox__nav .f-button.is-prev {
+	left: 10rem;
+}
