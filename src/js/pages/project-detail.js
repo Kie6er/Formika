@@ -13,15 +13,14 @@ $(document).ready(function () {
 	ScrollTrigger.refresh();
 
 	if ($('.project-content').length > 0) {
+		let projectItemSmallTop = gsap.utils.toArray('.small--top');
+		let projectItemSmallBottom = gsap.utils.toArray('.small--bottom');
+		let projectItemBig = gsap.utils.toArray('.item-big-anim');
+		let projectItemImage = gsap.utils.toArray('.project-content__item img')
+
+		let timelineProject = gsap.timeline();
 		// Анимация gsap
 		if (ScrollTrigger.isTouch !== 1) {
-			let projectItemSmallTop = gsap.utils.toArray('.small--top');
-			let projectItemSmallBottom = gsap.utils.toArray('.small--bottom');
-			let projectItemBig = gsap.utils.toArray('.item-big-anim');
-			let projectItemImage = gsap.utils.toArray('.project-content__item img')
-
-			let timelineProject = gsap.timeline();
-
 			timelineProject.to(projectItemSmallTop[0], {
 				startAt: {
 					y: "0rem",
@@ -109,7 +108,21 @@ $(document).ready(function () {
 			}
 		}
 		if (ScrollTrigger.isTouch === 1) {
-
+			projectItemImage.forEach(el => {
+				timelineProject.to(el, {
+					startAt: {
+						objectPosition: "50% 0%",
+					},
+					objectPosition: "50% 50%",
+					scrollTrigger: {
+						trigger: el,
+						start: `top bottom`,
+						end: `bottom top`,
+						// toggleActions: "play complete complete complete",
+						scrub: 2,
+					}
+				});
+			})
 		}
 	}
 
