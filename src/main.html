@@ -18,8 +18,8 @@
 					<div class="main-banner__back banner-back">
 						<video autoplay playsinline loop preload="auto" muted
 							poster="./assets/images/main/video-load.jpg">
-							<source src="./assets/main-video.mp4" type="video/mp4">
-							<source src="./assets/main-video.webm" type="video/webm">
+							<source src="./assets/video/main-video.mp4" type="video/mp4">
+							<source src="./assets/video/main-video.webm" type="video/webm">
 						</video>
 					</div>
 				</div>
@@ -71,8 +71,8 @@
 								</div>
 								<div class="main-projects__content-item">
 									<video loop preload="auto" muted>
-										<source src="./assets/main-video.mp4" type="video/mp4">
-										<source src="./assets/main-video.webm" type="video/webm">
+										<source src="./assets/video/main-video.mp4" type="video/mp4">
+										<source src="./assets/video/main-video.webm" type="video/webm">
 									</video>
 									<img src="./assets/images/main/main-7.webp" alt="">
 								</div>
@@ -90,8 +90,8 @@
 								</div>
 								<div class="main-projects__content-item">
 									<video loop preload="auto" muted>
-										<source src="./assets/main-video.mp4" type="video/mp4">
-										<source src="./assets/main-video.webm" type="video/webm">
+										<source src="./assets/video/main-video.mp4" type="video/mp4">
+										<source src="./assets/video/main-video.webm" type="video/webm">
 									</video>
 									<img src="./assets/images/main/main-2.webp" alt="">
 								</div>
@@ -312,7 +312,8 @@
 									</div>
 									<div class="form__footer">
 										<label class="form-label">
-											<input type="file" class="input-file">
+											<input type="file" class="input-file"
+												accept=".jpg, .jpeg, .png, .gif, .webp" hidden>
 											<div class="custom-file">
 												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
 													viewBox="0 0 24 24" fill="none">
@@ -323,7 +324,22 @@
 												</svg>
 												<span>add file</span>
 											</div>
-											<div class="custom-preview"></div>
+											<div class="custom-preview">
+												<div class="custom-preview__icon">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+														viewBox="0 0 24 24" fill="none">
+														<path
+															d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+															stroke="#727272" stroke-width="1.5" stroke-linecap="round"
+															stroke-linejoin="round" />
+														<path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#727272"
+															stroke-width="1.5" stroke-linecap="round"
+															stroke-linejoin="round" />
+													</svg>
+												</div>
+												<div class="custom-preview__name"></div>
+												<div class="custom-preview__size"></div>
+											</div>
 										</label>
 										<button class="btn hover">send<span></span></button>
 									</div>

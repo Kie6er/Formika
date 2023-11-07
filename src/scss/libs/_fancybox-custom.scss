@@ -10,7 +10,10 @@
 	width: 100%;
 	height: 100%;
 }
-
+.fancybox__backdrop {
+	background: rgba(14, 14, 14, 0.7);
+	backdrop-filter: blur(2.4rem);
+}
 .fancybox__thumbs {
 	display: none;
 }
@@ -18,6 +21,7 @@
 .fancybox__content {
 	width: 100% !important;
 	height: 100% !important;
+	margin-bottom: 10rem;
 
 	img,
 	video {
@@ -31,7 +35,7 @@
 }
 
 .fancybox__slide {
-	padding: 5rem 5rem 10rem;
+	padding: 5rem 5rem 0;
 	margin: 0;
 }
 
@@ -87,4 +91,45 @@
 .is-horizontal .f-carousel__nav .f-button.is-prev,
 .is-horizontal .fancybox__nav .f-button.is-prev {
 	left: 10rem;
+}
+
+@media (max-width: 48em) {
+	.fancybox__content {
+		margin-top: 19.6rem;
+		margin-bottom: 34rem;
+	}
+	.fancybox__slide {
+		padding: 3.2rem;
+		margin: 0;
+	}
+
+	.f-button {
+		width: 9.6rem;
+		height: 9.6rem;
+	}
+
+	.f-button.is-close-btn {
+		bottom: 22.8rem;
+	}
+
+	.f-button svg {
+		width: 3.8rem;
+		height: 2.6rem;
+	}
+	.is-horizontal .f-carousel__nav .f-button.is-prev,
+	.is-horizontal .f-carousel__nav .f-button.is-next,
+	.is-horizontal .fancybox__nav .f-button.is-prev,
+	.is-horizontal .fancybox__nav .f-button.is-next {
+		bottom: 22.8rem;
+	}
+
+	.is-horizontal .f-carousel__nav .f-button.is-next,
+	.is-horizontal .fancybox__nav .f-button.is-next {
+		right: 3.2rem;
+	}
+
+	.is-horizontal .f-carousel__nav .f-button.is-prev,
+	.is-horizontal .fancybox__nav .f-button.is-prev {
+		left: 3.2rem;
+	}
 }

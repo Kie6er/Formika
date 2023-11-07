@@ -10,6 +10,7 @@ import { ScrollSmoother } from "./js/utils/ScrollSmoother.min";
 import "./index.scss";
 import "./js/components/header";
 import "./js/components/form";
+import "./js/components/file";
 import "./js/pages/main-page";
 import "./js/pages/project-detail";
 
