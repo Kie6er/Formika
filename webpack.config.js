@@ -16,6 +16,7 @@ const entryPoints = {
 	main: path.resolve(__dirname, "src", "index.js"),
 	"project-detail": path.resolve(__dirname, "src", "index.js"),
 	404: path.resolve(__dirname, "src", "index.js"),
+	about: path.resolve(__dirname, "src", "index.js"),
 	// Добавьте другие страницы здесь
 };
 

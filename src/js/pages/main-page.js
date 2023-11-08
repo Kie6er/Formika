@@ -6,7 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 $(document).ready(function () {
 	ScrollTrigger.refresh();
-
 	let solutionsTimeline = gsap.timeline({
 		defaults: {
 			scrollTrigger: {
@@ -248,12 +247,8 @@ $(document).ready(function () {
 			mainProjectsSession.progress(parseFloat(savedProgressProjects));
 			mobileTimeline.progress(parseFloat(savedProgressMobile));
 		}
-
-		ScrollTrigger.refresh();
 	});
-	window.addEventListener('resize', function () {
-		ScrollTrigger.refresh();
-	})
+
 
 	// Воиспрозвидение видео
 	videoPlay();

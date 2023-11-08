@@ -2,12 +2,6 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-window.addEventListener('load', function () {
-	ScrollTrigger.refresh();
-});
-window.addEventListener('resize', function () {
-	ScrollTrigger.refresh();
-})
 
 $(document).ready(function () {
 	ScrollTrigger.refresh();
