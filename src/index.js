@@ -13,6 +13,7 @@ import "./js/components/form";
 import "./js/components/file";
 import "./js/pages/main-page";
 import "./js/pages/project-detail";
+import "./js/pages/about";
 
 import * as constants from "./js/utils/constants";
 const phone = document.querySelectorAll('[type=tel]');
@@ -30,3 +31,13 @@ ScrollSmoother.create({
 	smooth: 3,
 	effects: true,
 });
+
+window.addEventListener('resize', function () {
+	ScrollTrigger.refresh();
+})
+window.addEventListener('load', function () {
+	ScrollTrigger.refresh();
+})
+window.addEventListener('beforeunload', function () {
+	ScrollTrigger.refresh();
+})
