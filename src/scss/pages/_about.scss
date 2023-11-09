@@ -386,22 +386,36 @@
 	}
 	// .about-clients__horizontal
 	&__horizontal {
-		width: 100%;
+		max-width: 100%;
 		height: auto;
 		overflow: hidden;
 	}
 	// .about-clients__horizontal-container
 	&__horizontal-container {
-		margin: 0 10rem;
 		display: flex;
-		align-items: center;
-		gap: 23.7rem;
-		flex-wrap: nowrap;
+		width: 220%;
+		will-change: transform;
+		animation: image-infinite 12s linear infinite;
 	}
 	// .about-clients__horizontal-card
-	&__horizontal-card {
-		width: 19.8rem;
-		height: 19.8rem;
-		flex: 1 0 19.8rem;
+	&__horizontal-cards {
+		display: flex;
+		width: 100%;
+		justify-content: space-around;
+
+		img {
+			display: block;
+			width: 19.8rem;
+			height: 19.8rem;
+		}
+	}
+}
+
+@keyframes image-infinite {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-50%);
 	}
 }

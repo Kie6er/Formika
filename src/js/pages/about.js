@@ -107,21 +107,4 @@ $(document).ready(function () {
 			).to({}, {});
 		};
 	};
-
-	if ($('.about-clients').length > 0) {
-		const container = document.querySelector(".about-clients__horizontal-container");
-		const panels = gsap.utils.toArray(".about-clients__horizontal-card");
-		if (ScrollTrigger.isTouch !== 1) {
-			gsap.to(container, {
-				x: -(panels.length * panels[0].offsetWidth),
-				ease: "power1.inOut",
-				scrollTrigger: {
-					trigger: ".about-clients",
-					start: "-30% center",
-					end: "150% center",
-					scrub: 4,
-				}
-			})
-		}
-	}
 });
