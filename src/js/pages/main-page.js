@@ -245,15 +245,16 @@ $(document).ready(function () {
 	// 	// 	// })
 	// }
 
+	gsap.registerPlugin(ScrollTrigger);
 
 	window.addEventListener('load', function () {
-		gsap.registerPlugin(ScrollTrigger);
 		ScrollTrigger.refresh();
 	});
-	ScrollTrigger.config({ ignoreMobileResize: true });
-	// window.addEventListener('scroll', function () {
-	// 	ScrollTrigger.refresh();
-	// });
+	ScrollTrigger.config({
+		ignoreMobileResize: true,
+		autoRefreshEvents: "load, DOMContentLoaded, resize"
+	});
+
 	if ($('.main-solutions').length > 0) {
 
 		let mainPageMm = gsap.matchMedia();
