@@ -245,6 +245,7 @@ $(document).ready(function () {
 	// 	// 	// })
 	// }
 
+	gsap.registerPlugin(ScrollTrigger);
 
 	window.addEventListener('load', function () {
 		ScrollTrigger.refresh();
@@ -257,8 +258,7 @@ $(document).ready(function () {
 		});
 		mainPageMm.add("(max-width: 768px)", () => {
 			console.log('mobile');
-			gsap.registerPlugin(ScrollTrigger);
-			ScrollTrigger.refresh();
+			// ScrollTrigger.refresh();
 
 			gsap.timeline().to('.main-solutions__main-back', {
 				startAt: { scale: 0.45 },
