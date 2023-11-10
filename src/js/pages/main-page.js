@@ -245,11 +245,15 @@ $(document).ready(function () {
 	// 	// 	// })
 	// }
 
-	gsap.registerPlugin(ScrollTrigger);
 
 	window.addEventListener('load', function () {
+		gsap.registerPlugin(ScrollTrigger);
 		ScrollTrigger.refresh();
 	});
+	ScrollTrigger.config({ ignoreMobileResize: true });
+	// window.addEventListener('scroll', function () {
+	// 	ScrollTrigger.refresh();
+	// });
 	if ($('.main-solutions').length > 0) {
 
 		let mainPageMm = gsap.matchMedia();
@@ -260,15 +264,17 @@ $(document).ready(function () {
 			console.log('mobile');
 			// ScrollTrigger.refresh();
 
-			gsap.timeline().to('.main-solutions__main-back', {
+			gsap.to('.main-solutions__main-back', {
 				startAt: { scale: 0.45 },
 				scale: 1,
 				scrollTrigger: {
 					trigger: '.main-solutions',
 					markers: true,
-					start: `top 50%`,
-					end: `center 50%`,
-					scrub: 2
+					start: `0 50%`,
+					end: `50% 50%`,
+					scrub: 2,
+					preventOverlaps: true,
+					fastScrollEnd: true,
 				}
 			})
 
