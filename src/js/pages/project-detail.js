@@ -1,13 +1,14 @@
 import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-window.addEventListener('load', () => {
-	gsap.registerPlugin(ScrollTrigger);
-	ScrollTrigger.refresh();
-});
+
+
 $(document).ready(function () {
-	ScrollTrigger.refresh();
 	// GSAP анимации
+	gsap.registerPlugin(ScrollTrigger);
+	window.addEventListener('DOMContentLoaded', () => {
+		ScrollTrigger.refresh();
+	});
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
 
 	const projectPageMm = gsap.matchMedia();
