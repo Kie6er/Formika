@@ -5,6 +5,7 @@ import IMask from 'imask';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "./js/utils/ScrollSmoother.min";
+
 import "./index.scss";
 import "./js/components/header";
 import "./js/components/form";
