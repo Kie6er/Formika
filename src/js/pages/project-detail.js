@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
 	ScrollTrigger.refresh();
 });
 $(document).ready(function () {
+	ScrollTrigger.refresh();
 	// GSAP анимации
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
 
