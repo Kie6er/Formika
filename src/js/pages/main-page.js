@@ -2,13 +2,12 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-window.addEventListener('load', () => {
-	gsap.registerPlugin(ScrollTrigger);
-	ScrollTrigger.refresh();
-});
 $(document).ready(function () {
-	ScrollTrigger.refresh();
 	// GSAP анимации
+	gsap.registerPlugin(ScrollTrigger);
+	window.addEventListener('DOMContentLoaded', () => {
+		ScrollTrigger.refresh();
+	});
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
 
 	const mainPageMm = gsap.matchMedia();
@@ -122,8 +121,7 @@ $(document).ready(function () {
 							trigger: el,
 							start: "50% center",
 							end: "70% center",
-							scrub: 4,
-							fastScrollEnd: 3000
+							scrub: 3,
 							// markers: true,
 						}
 					})
@@ -134,22 +132,23 @@ $(document).ready(function () {
 							trigger: el,
 							start: `-=${$(el).height() * 2} center`,
 							end: `-=${$(el).height() * 1.4} center`,
-							scrub: 4,
+							scrub: 1,
+							fastScrollEnd: true
 						}
-					})
-				}
-
-				if (i !== 3 && i !== 0) {
-					projectsDeskTimeline.fromTo(el, { y: "0rem" }, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "35% center",
-							end: "55% center",
-							scrub: 4,
-							preventOverlaps: true
-							// markers: true
+					}).add(function () {
+						if (i !== 3) {
+							projectsDeskTimeline.fromTo(el, { y: "0rem" }, {
+								y: "-60rem",
+								scrollTrigger: {
+									trigger: el,
+									start: "35% center",
+									end: "55% center",
+									scrub: 3,
+									// markers: true
+								}
+							})
 						}
+						return (projectsDeskTimeline)
 					})
 				}
 			});
@@ -162,9 +161,8 @@ $(document).ready(function () {
 							trigger: el,
 							start: "10% center",
 							end: "30% center",
-							scrub: 4,
+							scrub: 3,
 							// markers: true
-							fastScrollEnd: 3000
 						}
 					})
 				} else {
@@ -174,23 +172,25 @@ $(document).ready(function () {
 							trigger: el,
 							start: `-=${$(el).height() * 2.4} center`,
 							end: `-=${$(el).height() * 1.8} center`,
-							scrub: 4,
+							scrub: 1.5,
+							fastScrollEnd: true
 							// markers: true
 						}
-					})
-				}
-
-				if (i !== 3 && i !== 0) {
-					projectsDeskTimeline.fromTo(el, { y: "0rem" }, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "-5% center",
-							end: "15% center",
-							scrub: 4,
-							preventOverlaps: true
-							// markers: true
+					}).add(function () {
+						if (i !== 3) {
+							projectsDeskTimeline.to(el, {
+								startAt: { y: "0rem" },
+								y: "-60rem",
+								scrollTrigger: {
+									trigger: el,
+									start: "-5% center",
+									end: "15% center",
+									scrub: 3,
+									// markers: true
+								}
+							})
 						}
+						return (projectsDeskTimeline)
 					})
 				}
 			});
