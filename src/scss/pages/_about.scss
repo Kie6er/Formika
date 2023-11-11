@@ -243,6 +243,10 @@
 			line-height: 140%; /* 25.2px */
 			text-transform: uppercase;
 		}
+
+		&--border {
+			border: 0.1rem solid $brown;
+		}
 	}
 	&__circle {
 		display: flex;

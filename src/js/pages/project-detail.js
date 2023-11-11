@@ -9,6 +9,9 @@ $(document).ready(function () {
 	window.addEventListener('DOMContentLoaded', () => {
 		ScrollTrigger.refresh();
 	});
+	window.addEventListener('load', () => {
+		ScrollTrigger.refresh();
+	});
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
 
 	const projectPageMm = gsap.matchMedia();
