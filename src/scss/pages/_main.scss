@@ -790,7 +790,7 @@
 			height: auto;
 			display: flex;
 			flex-direction: column;
-			gap: 6.4rem;
+			gap: 6.8rem;
 		}
 		// .main-contacts__title
 		&__title.h1 {
@@ -805,8 +805,7 @@
 			text-transform: uppercase;
 		}
 		// .main-contacts__info
-		&__info.mobile {
-			padding-left: 4.4rem;
+		&__info {
 			display: flex;
 			flex-direction: column;
 			width: 100%;

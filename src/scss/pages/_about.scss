@@ -178,8 +178,6 @@
 			top: 0;
 			z-index: 3;
 
-			&--first {
-			}
 			&--second {
 				clip-path: polygon(0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%);
 			}
@@ -199,9 +197,6 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		gap: 14.5rem;
-	}
-	// .about-advantages__subtitle
-	&__subtitle {
 	}
 	// .about-advantages__wrapper
 	&__wrapper {
@@ -381,9 +376,6 @@
 
 		margin-bottom: 12rem;
 	}
-	// .about-clients__subtitle
-	&__subtitle {
-	}
 	// .about-clients__title
 	&__title.h1 {
 		line-height: 80%;
@@ -398,7 +390,6 @@
 	&__horizontal-container {
 		display: flex;
 		width: 220%;
-		will-change: transform;
 		animation: image-infinite 12s linear infinite;
 	}
 	// .about-clients__horizontal-card
@@ -421,5 +412,317 @@
 	}
 	100% {
 		transform: translateX(-50%);
+	}
+}
+
+@media (max-width: 48em) {
+	.about-banner {
+		// .about-banner__inner
+		&__inner {
+			padding-top: 3rem;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		// .about-banner__content
+		&__content {
+			width: 100%;
+		}
+		// .about-banner__title
+		&__title {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-bottom: 6.8rem;
+			strong {
+				display: block;
+				width: 60%;
+				font-size: 8rem;
+				line-height: 110%;
+			}
+
+			span {
+				font-size: 3rem;
+				font-weight: 300;
+				line-height: normal;
+				margin-top: 0;
+				margin-bottom: -1rem;
+			}
+		}
+		// .about-banner__description
+		&__description.text-24 {
+			margin-bottom: 5.4rem;
+			font-size: 3rem;
+		}
+		// .about-banner__btn
+		&__btn {
+			span {
+				box-shadow: inset 0 0 0 0.4rem $brown;
+			}
+		}
+		// .about-banner__image
+		&__image {
+			width: 100%;
+			height: 40rem;
+			margin-bottom: 6rem;
+		}
+	}
+	.about-circles {
+		// .about-circles__inner
+		&__inner {
+			align-items: flex-start;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			gap: 6.4rem 1rem;
+		}
+		// .about-circles__item
+		&__item {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			width: 33.4rem;
+			height: auto;
+			gap: 2rem;
+		}
+	}
+	.circle-item {
+		&:hover {
+			.circle-item__back {
+				transform: scale(1);
+			}
+		}
+		// .circle-item__content
+		&__content {
+			position: static;
+			width: 100%;
+			text-align: center;
+			order: 2;
+		}
+		// .circle-item__num
+		&__num {
+			font-size: 6rem;
+			line-height: normal;
+			margin-bottom: 1rem;
+		}
+		// .circle-item__text
+		&__text {
+			font-size: 3rem;
+		}
+		// .circle-item__back
+		&__back {
+			order: 1;
+			width: 20rem;
+			height: 20rem;
+		}
+	}
+	.about-advantages {
+		// .about-advantages__inner
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 6rem;
+		}
+		// .about-advantages__wrapper
+		&__wrapper {
+			flex: 1;
+		}
+		// .about-advantages__title
+		&__title.h1 {
+			font-size: 8rem;
+			padding-left: 0;
+			width: 80%;
+			margin-bottom: 9.6rem;
+		}
+		// .about-advantages__content
+		&__content {
+			flex-direction: column;
+			flex-wrap: nowrap;
+		}
+		// .about-advantages__item
+		&__item {
+			width: 100%;
+			height: 21.2rem;
+			padding: 3.2rem;
+			flex-direction: row;
+			gap: 3.6rem;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: left;
+
+			border: 0.2rem solid $gray;
+			&-icon {
+				min-width: 9.6rem;
+				width: 9.6rem;
+				min-height: 9.6rem;
+				height: 9.6rem;
+				margin-bottom: 0;
+
+				svg {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			&-description {
+				width: auto;
+				font-size: 3rem;
+			}
+
+			&--border {
+				border: 0.2rem solid $brown;
+			}
+		}
+		&__circle {
+			display: flex;
+			width: 32.8rem;
+			height: 29.4rem;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			&-back {
+				width: 6.6rem;
+				height: 6.6rem;
+				border-radius: 50%;
+				background-color: $lightGray;
+				box-shadow:
+					0 0 0 3.1rem $bg,
+					0 0 0 6.7rem $lightGray;
+			}
+		}
+	}
+	.about-wedo {
+		// .about-wedo__inner
+		&__inner {
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+		}
+		// .about-wedo__subtitle
+		&__subtitle {
+			padding-top: 3.2rem;
+		}
+		// .about-wedo__wrapper
+		&__wrapper {
+			display: flex;
+			align-items: flex-start;
+			gap: 10.2rem;
+		}
+		// .about-wedo__content
+		&__content {
+			padding-top: 3.2rem;
+			height: 84rem;
+			display: flex;
+			flex-direction: column;
+		}
+		// .about-wedo__list
+		&__list {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			gap: 6rem;
+
+			li {
+				position: relative;
+				&:first-child {
+					strong {
+						color: $brown;
+					}
+				}
+				strong {
+					display: block;
+					color: $black;
+					font-size: 4.8rem;
+					font-weight: 400;
+					line-height: normal;
+					text-transform: uppercase;
+				}
+				span {
+					color: rgba(114, 114, 114, 0.3);
+					font-size: 1.8rem;
+					font-weight: 300;
+					line-height: 140%; /* 25.2px */
+					text-transform: uppercase;
+
+					position: absolute;
+					top: -0.2rem;
+					left: -3rem;
+					z-index: 1;
+				}
+			}
+		}
+		// .about-wedo__footer
+		&__footer {
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+		}
+		// .about-wedo__text
+		&__text {
+			width: 57rem;
+			color: $black;
+			font-size: 1.8rem;
+			font-weight: 300;
+			line-height: 140%; /* 25.2px */
+			text-transform: uppercase;
+		}
+		// .about-wedo__btn
+		&__btn {
+			color: $brown;
+
+			span {
+				box-shadow: inset 0 0 0 0.3rem $brown;
+				&::after {
+					background: $brown;
+				}
+			}
+		}
+		// .about-wedo__cards
+		&__cards {
+			width: 56.8rem;
+			height: 98rem;
+			position: relative;
+			overflow: hidden;
+
+			&-img {
+				will-change: transform;
+				width: 100%;
+				height: 100%;
+
+				&:not(:first-child) {
+					position: absolute;
+					top: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+	.about-clients {
+		// .about-clients__header
+		&__header {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 6rem;
+			margin-bottom: 8.6rem;
+		}
+		// .about-clients__title
+		&__title.h1 {
+			font-size: 8rem;
+			line-height: 110%;
+			width: 43.8rem;
+		}
+		// .about-clients__horizontal-container
+		&__horizontal-container {
+			width: 300%;
+			animation: image-infinite 10s linear infinite;
+		}
+		// .about-clients__horizontal-card
+		&__horizontal-cards {
+			img {
+				width: 20rem;
+				height: 20rem;
+			}
+		}
 	}
 }
