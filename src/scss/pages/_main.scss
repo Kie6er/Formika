@@ -624,6 +624,73 @@
 		}
 	}
 }
+.contacts-map {
+	// .contacts-map__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		gap: 6rem;
+	}
+	// .contacts-map__content
+	&__content {
+		display: flex;
+		gap: 9rem;
+		justify-content: space-between;
+	}
+	// .contacts-map__map
+	&__map {
+		width: 78rem;
+		height: 34rem;
+		flex-shrink: 0;
+	}
+	// .contacts-map__wrapper
+	&__wrapper {
+		display: flex;
+		gap: 13.2rem;
+	}
+	// .contacts-map__info
+	&__info {
+		&.desktop {
+			width: 30.3rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&.mobile {
+			display: none;
+		}
+	}
+	// .contacts-map__item
+	&__item {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		text-transform: uppercase;
+
+		a {
+			color: $black;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .contacts-map__btn
+	&__btn {
+		color: $brown;
+
+		span {
+			box-shadow: inset 0 0 0 0.3rem $brown;
+			&::after {
+				background: $brown;
+			}
+		}
+	}
+	// .contacts-map__form
+	&__form {
+		width: 41.3rem;
+	}
+}
 
 @media (max-width: 48em) {
 	.main-banner {
@@ -1040,6 +1107,68 @@
 		}
 		&__btn-wrapper {
 			display: none;
+		}
+	}
+	.contacts-map {
+		// .contacts-map__inner
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			gap: 6rem;
+		}
+		// .contacts-map__content
+		&__content {
+			display: flex;
+			flex-direction: column;
+			gap: 9.6rem;
+			justify-content: space-between;
+		}
+		// .contacts-map__map
+		&__map {
+			width: 100%;
+			height: 56rem;
+		}
+		// .contacts-map__wrapper
+		&__wrapper {
+			display: flex;
+			gap: 13.2rem;
+		}
+		// .contacts-map__info
+		&__info {
+			&.desktop {
+				display: none;
+			}
+
+			&.mobile {
+				display: flex;
+				flex-direction: column;
+				gap: 6.4rem;
+			}
+		}
+		// .contacts-map__item
+		&__item {
+			display: flex;
+			flex-direction: column;
+			gap: 3.2rem;
+			text-transform: uppercase;
+
+			a {
+				color: $black;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		// .contacts-map__btn
+		&__btn.btn {
+			font-size: 3rem;
+			span {
+				box-shadow: inset 0 0 0 0.4rem $brown;
+			}
+		}
+		// .contacts-map__form
+		&__form {
+			width: 100%;
 		}
 	}
 }
