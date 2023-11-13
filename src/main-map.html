@@ -243,31 +243,31 @@
 					</div>
 				</div>
 			</section>
-			<!-- Контакты без карты -->
-			<section class="main-contacts">
-				<div class="main-contacts__container container">
-					<div class="main-contacts__inner">
-						<div class="main-contacts__left">
-							<div class="main-contacts__title h1">Be in touch</div>
-							<div class="main-contacts__info text-18">
-								<div><a href="tel:+7 (495) 981-5000">+7 (495) 981-5000</a></div>
-								<div><a href="mailto:info@formika.ru">info@formika.ru</a></div>
-								<div>2nd Zvenigorodskaya str., 13, building 41, Moscow</div>
+			<!-- Контакты с картой -->
+			<section class="contacts-map">
+				<div class="contacts-map__container container">
+					<div class="contacts-map__inner">
+						<div class="contacts-map__title h1">Be in touch</div>
+						<div class="contacts-map__content">
+							<div class="contacts-map__info mobile">
+								<div class="contacts-map__item text-18">
+									<div><a href="tel:+7 (495) 981-5000">+7 (495) 981-5000</a></div>
+									<div><a href="mailto:info@formika.ru">info@formika.ru</a></div>
+									<div>2nd Zvenigorodskaya str., 13, building 41, Moscow</div>
+								</div>
+								<a class="contacts-map__btn btn hover" href="#">join our team<span></span></a>
 							</div>
-							<div class="main-contacts__team">
-								<strong class="text-20">join our team</strong>
-								<a class="main-contacts__team-btn btn hover" href="#">View job<span></span></a>
-							</div>
-						</div>
-						<div class="main-contacts__center">
-							<div class="main-contacts__center--bg"></div>
-							<div class="main-contacts__center--circle"></div>
-							<div class="main-contacts__center--overlay"></div>
-						</div>
-						<div class="main-contacts__right">
-							<div class="main-contacts__form-title h2 desktop">Send message</div>
-							<div class="main-contacts__form-item">
-								<form class="main-contacts__form form">
+							<div class="contacts-map__map"></div>
+							<div class="contacts-map__wrapper">
+								<div class="contacts-map__info desktop">
+									<div class="contacts-map__item text-18">
+										<div><a href="tel:+7 (495) 981-5000">+7 (495) 981-5000</a></div>
+										<div><a href="mailto:info@formika.ru">info@formika.ru</a></div>
+										<div>2nd Zvenigorodskaya str., 13, building 41, Moscow</div>
+									</div>
+									<a class="contacts-map__btn btn hover" href="#">join our team<span></span></a>
+								</div>
+								<form class="contacts-map__form form">
 									<div class="form-main">
 										<label class="form-label">
 											<input type="text" class="input" placeholder="name" data-required="true">
@@ -325,6 +325,24 @@
 			<include src="./components/footer.html"></include>
 		</div>
 	</div>
+	<!-- V V V Добавить если нужна карта в контактах V V V -->
+	<script src="https://api-maps.yandex.ru/v3/?apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1&lang=ru_RU"></script>
+	<script>
+		init();
+		async function init() {
+			await ymaps3.ready;
+			const { YMap, YMapDefaultSchemeLayer } = ymaps3;
+
+			const map = new YMap(document.querySelector('.contacts-map__map'), {
+				location: {
+					center: [37.588144, 55.733842],
+					zoom: 16
+				}
+			});
+			map.addChild(new YMapDefaultSchemeLayer());
+		}
+	</script>
+	<!-- ^ ^ ^ -->
 </body>
 
 </html>
