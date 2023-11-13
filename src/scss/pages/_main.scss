@@ -70,10 +70,10 @@
 		margin: 0 auto;
 		// .main-solutions__wrapper-content
 		&-content {
-			width: 81.7rem;
+			width: 87.8rem;
 			position: absolute;
 			left: 4.6rem;
-			top: 9.8rem;
+			top: 13.9rem;
 			z-index: 4;
 		}
 		// .main-solutions__wrapper-title
@@ -81,15 +81,17 @@
 			display: flex;
 			flex-direction: column;
 			width: 70.5rem;
-			margin-bottom: 5rem;
+			margin-bottom: 2.5rem;
 			// .main-solutions__wrapper-title--top
 			&--top {
+				line-height: 100%;
 				align-self: flex-end;
 				margin-right: 2.5rem;
 				will-change: transform;
 			}
 			// .main-solutions__wrapper-title--bottom
 			&--bottom {
+				line-height: 100%;
 				margin-left: 9.2rem;
 				will-change: transform;
 			}
@@ -97,15 +99,15 @@
 		// .main-solutions__wrapper-description
 		&-description {
 			text-transform: uppercase;
-			margin-bottom: 4.2rem;
+			margin-bottom: 3rem;
 			margin-left: auto;
-			width: 53.6rem;
+			width: 58.6rem;
 			will-change: transform;
 		}
 		// .main-solutions__wrapper-text
 		&-text {
-			width: 46.7rem;
-			margin-left: auto;
+			width: 51.9rem;
+			margin-left: 35.3rem;
 			text-transform: uppercase;
 			color: $grayText;
 			will-change: transform;
