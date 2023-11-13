@@ -46,7 +46,7 @@ $(document).ready(function () {
 			scrollTrigger: {
 				trigger: ".about-wedo",
 				pin: ".about-wedo",
-				start: "top 13%",
+				start: "top 12%",
 				scrub: true,
 				// markers: true,
 				end: () => "+=" + wedoCards.length * wedoCards[0].offsetHeight
@@ -55,7 +55,7 @@ $(document).ready(function () {
 		const listTimeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".about-wedo",
-				start: "top 13%",
+				start: "top 12%",
 				end: () => "+=" + wedoCards.length * wedoCards[0].offsetHeight,
 				scrub: true,
 			}
