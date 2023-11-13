@@ -22,11 +22,13 @@ $('[type=tel]').each(function () {
 		mask: '+0 (000) 000-00-00'
 	});
 });
-
-ScrollSmoother.create({
-	wrapper: '.page',
-	content: '.content',
-	smooth: 3,
+gsap.matchMedia().add("(min-width: 769px)", () => { // desktop
+	if (ScrollTrigger.isTouch !== 1) {
+		ScrollSmoother.create({
+			wrapper: '.page',
+			content: '.content',
+			smooth: 3,
+		});
+	}
 });
-
 
