@@ -86,4 +86,28 @@ $(document).ready(function () {
 			0.5 * listItems.length
 		).to({}, {});
 	}
+
+	// Аккордеон
+	const accordionBtn = document.querySelectorAll('.about-wedo__accordion-button');
+	accordionBtn.forEach(el => {
+		let firstItem = accordionBtn[0];
+		let firstItemContent = firstItem.nextElementSibling;
+
+		firstItem.classList.add('active');
+		firstItemContent.style.maxHeight = firstItemContent.scrollHeight + 'px';
+
+		el.addEventListener('click', () => {
+			let content = el.nextElementSibling;
+
+			if (el.classList.contains('active')) {
+				document.querySelectorAll('.about-wedo__accordion-content').forEach(el => el.style.maxHeight = null);
+				accordionBtn.forEach(el => el.classList.remove('active'));
+			} else {
+				document.querySelectorAll('.about-wedo__accordion-content').forEach(el => el.style.maxHeight = null);
+				content.style.maxHeight = content.scrollHeight + 'px';
+				accordionBtn.forEach(el => el.classList.remove('active'));
+				el.classList.add('active')
+			}
+		})
+	})
 });
