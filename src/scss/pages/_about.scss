@@ -279,6 +279,7 @@
 			display: flex;
 			align-items: flex-start;
 			gap: 10.2rem;
+			height: calc(100vh - 13rem);
 		}
 		&.mobile {
 			display: none;
@@ -287,8 +288,10 @@
 	// .about-wedo__content
 	&__content {
 		padding-top: 3.2rem;
-		height: 80rem;
+		padding-bottom: 10rem;
+		height: 100%;
 		display: flex;
+		gap: 2rem;
 		flex-direction: column;
 	}
 	// .about-wedo__list
@@ -296,7 +299,7 @@
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		gap: 5rem;
+		gap: 6rem;
 
 		li {
 			position: relative;
@@ -356,7 +359,7 @@
 	// .about-wedo__cards
 	&__cards {
 		width: 56.8rem;
-		height: 98rem;
+		height: 100%;
 		position: relative;
 		overflow: hidden;
 
