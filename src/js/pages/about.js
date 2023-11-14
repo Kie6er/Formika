@@ -1,6 +1,7 @@
 import $ from "jquery";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollSmoother } from "../utils/ScrollSmoother.min";
 
 $(document).ready(function () {
 	// GSAP анимации
@@ -15,7 +16,18 @@ $(document).ready(function () {
 	const aboutPageMm = gsap.matchMedia();
 	aboutPageMm.add("(min-width: 769px)", () => { // desktop
 		$('.about-circles').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutCirclesAnimDesk() : null;
-		$('.about-wedo').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutWedoAnimDesk() : null;
+		if ($('.about-wedo').length > 0 && ScrollTrigger.isTouch !== 1) {
+			aboutWedoAnimDesk();
+			// gsap.matchMedia().add("(min-width: 769px)", () => { // desktop
+			// 	if (ScrollTrigger.isTouch !== 1) {
+			// 		ScrollSmoother.create({
+			// 			wrapper: '.page',
+			// 			content: '.content',
+			// 			smooth: 3,
+			// 		});
+			// 	}
+			// });
+		}
 	});
 	aboutPageMm.add("(max-width: 768px)", () => { // mobile
 		// $('.main-solutions').length > 0 ? mainSolutionAnimMobile() : null;
@@ -64,7 +76,7 @@ $(document).ready(function () {
 		wedoCards.slice(1).forEach((card, i) => {
 			wedoCardsTimeline.fromTo(card, { yPercent: 0 }, {
 				yPercent: -100,
-				duration: 0.5
+				duration: 0.5,
 			});
 		});
 

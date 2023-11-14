@@ -125,6 +125,7 @@ $(document).ready(function () {
 							start: "50% center",
 							end: "70% center",
 							scrub: 3,
+							invalidateOnRefresh: !0,
 							// markers: true,
 						}
 					})
@@ -136,7 +137,8 @@ $(document).ready(function () {
 							start: `-=${$(el).height() * 2} center`,
 							end: `-=${$(el).height() * 1.4} center`,
 							scrub: 1,
-							fastScrollEnd: true
+							fastScrollEnd: true,
+							invalidateOnRefresh: !0,
 						}
 					}).add(function () {
 						if (i !== 3) {
@@ -147,6 +149,7 @@ $(document).ready(function () {
 									start: "35% center",
 									end: "55% center",
 									scrub: 3,
+									invalidateOnRefresh: !0,
 									// markers: true
 								}
 							})
@@ -166,6 +169,7 @@ $(document).ready(function () {
 							end: "30% center",
 							scrub: 3,
 							// markers: true
+							invalidateOnRefresh: !0,
 						}
 					})
 				} else {
@@ -176,7 +180,8 @@ $(document).ready(function () {
 							start: `-=${$(el).height() * 2.4} center`,
 							end: `-=${$(el).height() * 1.8} center`,
 							scrub: 1.5,
-							fastScrollEnd: true
+							fastScrollEnd: true,
+							invalidateOnRefresh: !0,
 							// markers: true
 						}
 					}).add(function () {
@@ -189,6 +194,7 @@ $(document).ready(function () {
 									start: "-5% center",
 									end: "15% center",
 									scrub: 3,
+									invalidateOnRefresh: !0,
 									// markers: true
 								}
 							})
@@ -201,6 +207,19 @@ $(document).ready(function () {
 			return projectsDeskTimeline;
 		})
 	}
+
+	$('.main-projects__content-item--btn').on('click', function (evt) {
+		evt.preventDefault();
+		if ($(this).hasClass('active')) {
+			$('.main-projects__content-hidden').each(function (i, el) { $(el).css('max-height', '0') })
+			$('.main-projects__content-item--btn').removeClass('active')
+		} else {
+			$('.main-projects__content-hidden').each(function (i, el) {
+				$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
+			})
+			$('.main-projects__content-item--btn').addClass('active');
+		}
+	})
 
 	// Воиспрозвидение видео
 	videoPlay();
