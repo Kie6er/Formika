@@ -16,18 +16,7 @@ $(document).ready(function () {
 	const aboutPageMm = gsap.matchMedia();
 	aboutPageMm.add("(min-width: 769px)", () => { // desktop
 		$('.about-circles').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutCirclesAnimDesk() : null;
-		if ($('.about-wedo').length > 0 && ScrollTrigger.isTouch !== 1) {
-			aboutWedoAnimDesk();
-			// gsap.matchMedia().add("(min-width: 769px)", () => { // desktop
-			// 	if (ScrollTrigger.isTouch !== 1) {
-			// 		ScrollSmoother.create({
-			// 			wrapper: '.page',
-			// 			content: '.content',
-			// 			smooth: 3,
-			// 		});
-			// 	}
-			// });
-		}
+		$('.about-wedo').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutWedoAnimDesk() : null;
 	});
 	aboutPageMm.add("(max-width: 768px)", () => { // mobile
 		// $('.main-solutions').length > 0 ? mainSolutionAnimMobile() : null;
@@ -82,7 +71,7 @@ $(document).ready(function () {
 
 		listItems.forEach((item, j) => {
 			if (listItems[j - 1]) {
-				listTimeline.set(item, { color: "#785b08" }, j * 0.75).set(
+				listTimeline.set(item, { color: "#785b08" }, j).set(
 					listItems[j - 1],
 					{ color: "#1d1d1d" },
 					"<"
