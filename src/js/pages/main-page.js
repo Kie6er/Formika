@@ -12,7 +12,6 @@ $(document).ready(function () {
 		ScrollTrigger.refresh();
 	});
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
-
 	const mainPageMm = gsap.matchMedia();
 	mainPageMm.add("(min-width: 769px)", () => { // desktop
 		$('.main-solutions').length > 0 && ScrollTrigger.isTouch !== 1 ? mainSolutionAnimDesktop() : null;
@@ -208,18 +207,18 @@ $(document).ready(function () {
 		})
 	}
 
-	$('.main-projects__content-item--btn').on('click', function (evt) {
-		evt.preventDefault();
-		if ($(this).hasClass('active')) {
-			$('.main-projects__content-hidden').each(function (i, el) { $(el).css('max-height', '0') })
-			$('.main-projects__content-item--btn').removeClass('active')
-		} else {
-			$('.main-projects__content-hidden').each(function (i, el) {
-				$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
-			})
-			$('.main-projects__content-item--btn').addClass('active');
-		}
-	})
+	// $('.main-projects__content-item--btn').on('click', function (evt) {
+	// 	evt.preventDefault();
+	// 	if ($(this).hasClass('active')) {
+	// 		$('.main-projects__content-hidden').each(function (i, el) { $(el).css('max-height', '0') })
+	// 		$(this).removeClass('active')
+	// 	} else {
+	// 		$('.main-projects__content-hidden').each(function (i, el) {
+	// 			$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
+	// 		})
+	// 		$(this).addClass('active');
+	// 	}
+	// })
 
 	// Воиспрозвидение видео
 	videoPlay();
