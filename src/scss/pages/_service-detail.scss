@@ -291,14 +291,15 @@
 		// .services-banner__list
 		&__list {
 			padding: 0 3.2rem;
-			flex: 0;
 			gap: 0;
 			overflow: auto;
 			padding-top: 0;
 			display: flex;
+			flex-wrap: nowrap;
 			flex-direction: row;
 
 			li {
+				flex: 1 1 auto;
 				position: relative;
 				padding-left: 4rem;
 
@@ -309,10 +310,8 @@
 				}
 
 				strong {
-					width: 60rem;
+					max-width: 60rem;
 					text-wrap: nowrap;
-					overflow-wrap: break-word;
-					word-wrap: break-word;
 					display: block;
 					color: $black;
 					text-transform: uppercase;
