@@ -4,7 +4,7 @@ import IMask from 'imask';
 // import 'swiper/css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
+// import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
 
 import "./index.scss";
 import "./js/components/header";
@@ -16,7 +16,7 @@ import "./js/pages/service-detail";
 import "./js/pages/about";
 import * as constants from "./js/utils/constants";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger);
 gsap.config({ trialWarn: false })
 
 $('[type=tel]').each(function () {
@@ -24,13 +24,13 @@ $('[type=tel]').each(function () {
 		mask: '+0 (000) 000-00-00'
 	});
 });
-gsap.matchMedia().add("(min-width: 769px)", () => { // desktop
-	if (ScrollTrigger.isTouch !== 1) {
-		ScrollSmoother.create({
-			wrapper: '.page',
-			content: '.content',
-			smooth: 3,
-		});
-	}
-});
+// gsap.matchMedia().add("(min-width: 769px)", () => { // desktop
+// 	if (ScrollTrigger.isTouch !== 1) {
+// 		ScrollSmoother.create({
+// 			wrapper: '.page',
+// 			content: '.content',
+// 			smooth: 3,
+// 		});
+// 	}
+// });
 
