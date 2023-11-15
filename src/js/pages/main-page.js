@@ -18,11 +18,32 @@ $(document).ready(function () {
 		if ($('.main-projects').length > 0 && ScrollTrigger.isTouch !== 1) {
 			mainProjectsAnimDesktop();
 			mainProjectsAnimMobile();
+
+			const projectsResizeHandler = function (entries) {
+				for (let entry of entries) {
+					ScrollTrigger.refresh()
+				}
+			}
+			const projectsResizeObserver = new ResizeObserver(projectsResizeHandler);
+			const projects = document.querySelector(".main-projects");
+			projectsResizeObserver.observe(projects);
 		}
 	});
 	mainPageMm.add("(max-width: 768px)", () => { // mobile
 		$('.main-solutions').length > 0 ? mainSolutionAnimMobile() : null;
-		$('.main-projects').length > 0 ? mainProjectsAnimMobile() : null;
+		if ($('.main-projects').length > 0) {
+			mainProjectsAnimMobile();
+			mainShowProjectsAnimMobile();
+
+			const projectsResizeHandler = function (entries) {
+				for (let entry of entries) {
+					ScrollTrigger.refresh()
+				}
+			}
+			const projectsResizeObserver = new ResizeObserver(projectsResizeHandler);
+			const projects = document.querySelector(".main-projects");
+			projectsResizeObserver.observe(projects);
+		};
 	});
 
 	function mainSolutionAnimMobile() {
@@ -62,7 +83,6 @@ $(document).ready(function () {
 
 		return solutionDeskTimeline;
 	}
-
 	function mainProjectsAnimMobile() {
 		const projectsImages = gsap.utils.toArray('.main-projects__content-item img');
 		projectsImages.forEach(el => {
@@ -70,7 +90,7 @@ $(document).ready(function () {
 				startAt: { objectPosition: "50% 80%" },
 				objectPosition: "50% 20%",
 				scrollTrigger: {
-					trigger: '.main-projects',
+					trigger: el,
 					start: `top bottom`,
 					end: `bottom top`,
 					// markers: true,
@@ -89,14 +109,14 @@ $(document).ready(function () {
 				trigger: '.main-projects',
 				pin: '.main-projects__subtitle',
 				start: 'top 40%',
-				end: '85% 50%',
+				end: () => `${$('.main-projects').height() - $('.main-projects__content-item').height() / 1.5} 50%`,
 			}
 		}).to('.main-projects__btn', {
 			scrollTrigger: {
 				trigger: '.main-projects',
 				pin: '.main-projects__btn',
 				start: 'top 40%',
-				end: '85% 50%',
+				end: () => `${$('.main-projects').height() - $('.main-projects__content-item').height() / 1.5} 50%`,
 			}
 		}).from('.main-projects__content-left', {
 			y: "20rem",
@@ -205,26 +225,66 @@ $(document).ready(function () {
 
 			return projectsDeskTimeline;
 		})
+		$('.main-projects__content-item--btn').on('click', function (evt) {
+			evt.preventDefault();
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				setTimeout(() => {
+					ScrollTrigger.refresh()
+					ScrollTrigger.update()
+				}, 1000)
+				$('.main-projects__content-hidden').each(function (i, el) {
+					$(el).css('max-height', '0')
+					setTimeout(() => {
+						$(el).css('display', 'none');
+					}, 1000)
+				})
+				$(this).text(`Show more`).append(`<span></span>`)
+			} else {
+				ScrollTrigger.refresh()
+				$(this).addClass('active');
+				$('.main-projects__content-hidden').each(function (i, el) {
+					$(el).css('display', 'flex');
+					setTimeout(() => {
+						$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
+					}, 0)
+				});
+				$(this).text(`Close`).append(`<span></span>`)
+			}
+		})
 	}
-
-	// $('.main-projects__content-item--btn').on('click', function (evt) {
-	// 	evt.preventDefault();
-	// 	if ($(this).hasClass('active')) {
-	// 		$('.main-projects__content-hidden').each(function (i, el) { $(el).css('max-height', '0') })
-	// 		$(this).removeClass('active')
-	// 	} else {
-	// 		$('.main-projects__content-hidden').each(function (i, el) {
-	// 			$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
-	// 		})
-	// 		$(this).addClass('active');
-	// 	}
-	// })
+	function mainShowProjectsAnimMobile() {
+		$('.main-projects__content-item--btn').on('click', function (evt) {
+			const content = $('.main-projects__content-hidden--mobile');
+			evt.preventDefault();
+			if ($(this).hasClass('active')) {
+				$(this).removeClass('active');
+				content.css('max-height', '0')
+				setTimeout(() => {
+					ScrollTrigger.refresh()
+					mainProjectsAnimMobile()
+					content.css('display', 'none');
+				}, 1000)
+				$(this).text(`Show more`).append(`<span></span>`)
+			} else {
+				$(this).addClass('active');
+				content.css('display', 'flex');
+				setTimeout(() => {
+					ScrollTrigger.refresh()
+					mainProjectsAnimMobile()
+					content.css('max-height', 51 * content.find('.main-projects__content-item').length + 'rem');
+				}, 0)
+				$(this).text(`Close`).append(`<span></span>`)
+			}
+		})
+	}
 
 	// Воиспрозвидение видео
 	videoPlay();
 	function videoPlay() {
 		//Получаем видео
 		let project = $(".main-projects__content-item");
+		let projectService = $('.services-cases__content-item');
 		let bannerVideo = $('.banner-back').find('video')[0];
 		// let isPlaying = bannerVideo.currentTime > 0 && !bannerVideo.paused && !bannerVideo.ended && bannerVideo.readyState > bannerVideo.HAVE_CURRENT_DATA;
 
@@ -234,6 +294,10 @@ $(document).ready(function () {
 		for (var i = 0; i < project.length; i++) {
 			project[i].addEventListener("mouseenter", e => { MouseEnter(e.target); });
 			project[i].addEventListener("mouseleave", e => { MouseLeave(e.target); });
+		}
+		for (var i = 0; i < projectService.length; i++) {
+			projectService[i].addEventListener("mouseenter", e => { MouseEnter(e.target); });
+			projectService[i].addEventListener("mouseleave", e => { MouseLeave(e.target); });
 		}
 	};
 	function MouseEnter(e) {

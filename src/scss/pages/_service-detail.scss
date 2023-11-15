@@ -24,7 +24,7 @@
 			position: relative;
 			padding-left: 2.5rem;
 
-			&:first-child {
+			&.active {
 				strong {
 					color: $brown;
 				}
@@ -61,7 +61,7 @@
 		line-height: 100%;
 		margin-bottom: 10rem;
 	}
-	// .services-banner__descroption
+	// .services-banner__description
 	&__description {
 		text-transform: uppercase;
 		margin-bottom: 7rem;
@@ -91,15 +91,16 @@
 
 			&:not(:first-child) {
 				position: absolute;
+				transition: 0.5s linear;
 				top: 100%;
 				left: 0;
+
+				&.active {
+					transition: 0.5s linear;
+					top: 0;
+				}
 			}
 		}
-	}
-}
-.services-cases {
-	.main-projects__content {
-		margin: 0;
 	}
 }
 .services-about {
@@ -156,6 +157,119 @@
 		gap: 3.2rem;
 	}
 }
+.services-cases {
+	overflow: hidden;
+	// .services-cases__inner
+	&__inner {
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	// .services-cases__subtitle
+	&__subtitle {
+		width: 14rem;
+		will-change: transform;
+	}
+	// .services-cases__content
+	&__content {
+		width: 128.5rem;
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+	}
+	&__content-hidden {
+		display: none;
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 1s ease-in-out;
+		flex-direction: column;
+		gap: 2rem;
+
+		&--mobile {
+			display: none;
+			overflow: hidden;
+			max-height: 0;
+			transition: max-height 1s ease-in-out;
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+	// .services-cases__content-left
+	&__content-left {
+		width: 63.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		will-change: transform;
+	}
+	// .services-cases__content-item
+	&__content-item {
+		width: 100%;
+		height: 49rem;
+		overflow: hidden;
+		position: relative;
+		will-change: transform;
+
+		img {
+			position: relative;
+			z-index: 2;
+			will-change: object-position;
+			transition:
+				transform 0.5s ease-in-out,
+				opacity 0.5s linear;
+		}
+		video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		&:hover {
+			img {
+				transition: transform 0.5s ease-in-out;
+				transform: scale(1.1);
+			}
+
+			video ~ img {
+				transition: opacity 0.5s linear;
+				opacity: 0;
+				transform: none;
+			}
+		}
+	}
+	// .services-cases__content-item--null
+	&__content-item--null {
+		height: 18rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	// .services-cases__content-item--btn
+	&__content-item--btn {
+		color: $brown;
+
+		span {
+			box-shadow: inset 0 0 0 0.3rem $brown;
+			&::after {
+				background: $brown;
+			}
+		}
+	}
+	// .services-cases__content-right
+	&__content-right {
+		width: 63.25rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 20rem;
+		will-change: transform;
+	}
+}
 
 @media (max-width: 48em) {
 	.services-banner {
@@ -190,12 +304,6 @@
 				text-wrap: nowrap;
 				position: relative;
 				padding-left: 4rem;
-
-				&:first-child {
-					strong {
-						color: unset;
-					}
-				}
 
 				&.active {
 					strong {
@@ -316,6 +424,65 @@
 			li.text-18 {
 				font-size: 3rem;
 			}
+		}
+	}
+	.services-cases {
+		// .main-projects__inner
+		&__inner {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+		// .main-projects__subtitle
+		&__subtitle {
+			width: 100%;
+			margin-bottom: 6.4rem;
+		}
+		// .main-projects__content
+		&__content {
+			width: 100%;
+			margin: 0;
+			justify-content: space-between;
+			flex-direction: column;
+			gap: 4rem;
+		}
+		// .main-projects__content-wrapper
+		&__content-left {
+			width: 100%;
+			gap: 4rem;
+		}
+
+		&__content-right {
+			width: 100%;
+			gap: 4rem;
+			margin-top: 0;
+		}
+		// .main-projects__content-item
+		&__content-item {
+			height: 33.4rem;
+		}
+		// .main-projects__content-item--null
+		&__content-item--null {
+			height: auto;
+
+			&.desktop {
+				display: none;
+			}
+			&.mobile {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+				margin-top: 2.4rem;
+			}
+		}
+		// .main-projects__content-item--btn
+		&__content-item--btn {
+			span {
+				box-shadow: inset 0 0 0 0.4rem $brown;
+			}
+		}
+		&__btn-wrapper {
+			display: none;
 		}
 	}
 }
