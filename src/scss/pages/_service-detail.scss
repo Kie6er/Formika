@@ -312,6 +312,8 @@
 
 				strong {
 					text-wrap: nowrap;
+					overflow-wrap: break-word;
+					word-wrap: break-word;
 					display: block;
 					color: $black;
 					text-transform: uppercase;
