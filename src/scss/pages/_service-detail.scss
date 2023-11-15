@@ -301,7 +301,6 @@
 			gap: 4rem;
 
 			li {
-				text-wrap: nowrap;
 				position: relative;
 				padding-left: 4rem;
 
@@ -312,6 +311,7 @@
 				}
 
 				strong {
+					text-wrap: nowrap;
 					display: block;
 					color: $black;
 					text-transform: uppercase;
