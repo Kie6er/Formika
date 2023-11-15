@@ -73,113 +73,114 @@ $(document).ready(function () {
 				start: 'top 40%',
 				end: '85% 50%',
 			}
-		}).from('.services-cases__content-left', {
-			y: "20rem",
-			scrollTrigger: {
-				trigger: '.services-cases',
-				start: "-10% center",
-				end: "-2% center",
-				scrub: 3,
-			}
-		}).from('.services-cases__content-right', {
-			y: "20rem",
-			scrollTrigger: {
-				trigger: '.services-cases',
-				start: "-2% center",
-				end: "6% center",
-				scrub: 3,
-			}
-		}).add(function () {
-			serviceItemsLeft.slice(0, 4).forEach((el, i) => {
-				if (i === 0) {
-					serviceDeskTimeline.to(el, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "50% center",
-							end: "70% center",
-							scrub: 3,
-							invalidateOnRefresh: !0,
-							// markers: true,
-						}
-					})
-				} else {
-					serviceDeskTimeline.from(el, {
-						y: "20rem",
-						scrollTrigger: {
-							trigger: el,
-							start: `-=${$(el).height() * 2} center`,
-							end: `-=${$(el).height() * 1.4} center`,
-							scrub: 1,
-							fastScrollEnd: true,
-							invalidateOnRefresh: !0,
-						}
-					}).add(function () {
-						if (i !== 3) {
-							serviceDeskTimeline.fromTo(el, { y: "0rem" }, {
-								y: "-60rem",
-								scrollTrigger: {
-									trigger: el,
-									start: "35% center",
-									end: "55% center",
-									scrub: 3,
-									invalidateOnRefresh: !0,
-									// markers: true
-								}
-							})
-						}
-						return (serviceDeskTimeline)
-					})
-				}
-			});
-
-			serviceItemsRight.slice(0, 4).forEach((el, i) => {
-				if (i === 0) {
-					serviceDeskTimeline.to(el, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "10% center",
-							end: "30% center",
-							scrub: 3,
-							// markers: true
-							invalidateOnRefresh: !0,
-						}
-					})
-				} else {
-					serviceDeskTimeline.from(el, {
-						y: "20rem",
-						scrollTrigger: {
-							trigger: el,
-							start: `-=${$(el).height() * 2.4} center`,
-							end: `-=${$(el).height() * 1.8} center`,
-							scrub: 1.5,
-							fastScrollEnd: true,
-							invalidateOnRefresh: !0,
-							// markers: true
-						}
-					}).add(function () {
-						if (i !== 3) {
-							serviceDeskTimeline.to(el, {
-								startAt: { y: "0rem" },
-								y: "-60rem",
-								scrollTrigger: {
-									trigger: el,
-									start: "-5% center",
-									end: "15% center",
-									scrub: 3,
-									invalidateOnRefresh: !0,
-									// markers: true
-								}
-							})
-						}
-						return (serviceDeskTimeline)
-					})
-				}
-			});
-
-			return serviceDeskTimeline;
 		})
+		// .from('.services-cases__content-left', {
+		// 	y: "20rem",
+		// 	scrollTrigger: {
+		// 		trigger: '.services-cases',
+		// 		start: "-10% center",
+		// 		end: "-2% center",
+		// 		scrub: 3,
+		// 	}
+		// }).from('.services-cases__content-right', {
+		// 	y: "20rem",
+		// 	scrollTrigger: {
+		// 		trigger: '.services-cases',
+		// 		start: "-2% center",
+		// 		end: "6% center",
+		// 		scrub: 3,
+		// 	}
+		// }).add(function () {
+		// 	serviceItemsLeft.slice(0, 4).forEach((el, i) => {
+		// 		if (i === 0) {
+		// 			serviceDeskTimeline.to(el, {
+		// 				y: "-60rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: "50% center",
+		// 					end: "70% center",
+		// 					scrub: 3,
+		// 					invalidateOnRefresh: !0,
+		// 					// markers: true,
+		// 				}
+		// 			})
+		// 		} else {
+		// 			serviceDeskTimeline.from(el, {
+		// 				y: "20rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: `-=${$(el).height() * 2} center`,
+		// 					end: `-=${$(el).height() * 1.4} center`,
+		// 					scrub: 1,
+		// 					fastScrollEnd: true,
+		// 					invalidateOnRefresh: !0,
+		// 				}
+		// 			}).add(function () {
+		// 				if (i !== 3) {
+		// 					serviceDeskTimeline.fromTo(el, { y: "0rem" }, {
+		// 						y: "-60rem",
+		// 						scrollTrigger: {
+		// 							trigger: el,
+		// 							start: "35% center",
+		// 							end: "55% center",
+		// 							scrub: 3,
+		// 							invalidateOnRefresh: !0,
+		// 							// markers: true
+		// 						}
+		// 					})
+		// 				}
+		// 				return (serviceDeskTimeline)
+		// 			})
+		// 		}
+		// 	});
+
+		// 	serviceItemsRight.slice(0, 4).forEach((el, i) => {
+		// 		if (i === 0) {
+		// 			serviceDeskTimeline.to(el, {
+		// 				y: "-60rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: "10% center",
+		// 					end: "30% center",
+		// 					scrub: 3,
+		// 					// markers: true
+		// 					invalidateOnRefresh: !0,
+		// 				}
+		// 			})
+		// 		} else {
+		// 			serviceDeskTimeline.from(el, {
+		// 				y: "20rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: `-=${$(el).height() * 2.4} center`,
+		// 					end: `-=${$(el).height() * 1.8} center`,
+		// 					scrub: 1.5,
+		// 					fastScrollEnd: true,
+		// 					invalidateOnRefresh: !0,
+		// 					// markers: true
+		// 				}
+		// 			}).add(function () {
+		// 				if (i !== 3) {
+		// 					serviceDeskTimeline.to(el, {
+		// 						startAt: { y: "0rem" },
+		// 						y: "-60rem",
+		// 						scrollTrigger: {
+		// 							trigger: el,
+		// 							start: "-5% center",
+		// 							end: "15% center",
+		// 							scrub: 3,
+		// 							invalidateOnRefresh: !0,
+		// 							// markers: true
+		// 						}
+		// 					})
+		// 				}
+		// 				return (serviceDeskTimeline)
+		// 			})
+		// 		}
+		// 	});
+
+		// 	return serviceDeskTimeline;
+		// })
 
 		$('.services-cases__content-item--btn').on('click', function (evt) {
 			evt.preventDefault();
@@ -195,8 +196,6 @@ $(document).ready(function () {
 						$(el).css('display', 'none');
 					}, 1000)
 				})
-
-				$(this).text(`Show more`).append(`<span></span>`)
 			} else {
 				ScrollTrigger.refresh()
 				$(this).addClass('active');
@@ -206,7 +205,6 @@ $(document).ready(function () {
 						$(el).css('max-height', 51 * $(this).find('.services-cases__content-item').length + 'rem');
 					}, 0)
 				});
-				$(this).text(`Close`).append(`<span></span>`)
 			}
 		})
 	}
@@ -238,7 +236,6 @@ $(document).ready(function () {
 					serviceProjectsAnimMobile()
 					content.css('display', 'none');
 				}, 1000)
-				$(this).text(`Show more`).append(`<span></span>`)
 			} else {
 				$(this).addClass('active');
 				content.css('display', 'flex');
@@ -247,7 +244,6 @@ $(document).ready(function () {
 					serviceProjectsAnimMobile()
 					content.css('max-height', 51 * content.find('.services-cases__content-item').length + 'rem');
 				}, 0)
-				$(this).text(`Close`).append(`<span></span>`)
 			}
 		})
 	}

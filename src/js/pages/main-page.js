@@ -118,113 +118,115 @@ $(document).ready(function () {
 				start: 'top 40%',
 				end: () => `${$('.main-projects').height() - $('.main-projects__content-item').height() / 1.5} 50%`,
 			}
-		}).from('.main-projects__content-left', {
-			y: "20rem",
-			scrollTrigger: {
-				trigger: '.main-projects',
-				start: "-10% center",
-				end: "-2% center",
-				scrub: 3,
-			}
-		}).from('.main-projects__content-right', {
-			y: "20rem",
-			scrollTrigger: {
-				trigger: '.main-projects',
-				start: "-2% center",
-				end: "6% center",
-				scrub: 3,
-			}
-		}).add(function () {
-			projectsItemsLeft.slice(0, 4).forEach((el, i) => {
-				if (i === 0) {
-					projectsDeskTimeline.to(el, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "50% center",
-							end: "70% center",
-							scrub: 3,
-							invalidateOnRefresh: !0,
-							// markers: true,
-						}
-					})
-				} else {
-					projectsDeskTimeline.from(el, {
-						y: "20rem",
-						scrollTrigger: {
-							trigger: el,
-							start: `-=${$(el).height() * 2} center`,
-							end: `-=${$(el).height() * 1.4} center`,
-							scrub: 1,
-							fastScrollEnd: true,
-							invalidateOnRefresh: !0,
-						}
-					}).add(function () {
-						if (i !== 3) {
-							projectsDeskTimeline.fromTo(el, { y: "0rem" }, {
-								y: "-60rem",
-								scrollTrigger: {
-									trigger: el,
-									start: "35% center",
-									end: "55% center",
-									scrub: 3,
-									invalidateOnRefresh: !0,
-									// markers: true
-								}
-							})
-						}
-						return (projectsDeskTimeline)
-					})
-				}
-			});
-
-			projectsItemsRight.slice(0, 4).forEach((el, i) => {
-				if (i === 0) {
-					projectsDeskTimeline.to(el, {
-						y: "-60rem",
-						scrollTrigger: {
-							trigger: el,
-							start: "10% center",
-							end: "30% center",
-							scrub: 3,
-							// markers: true
-							invalidateOnRefresh: !0,
-						}
-					})
-				} else {
-					projectsDeskTimeline.from(el, {
-						y: "20rem",
-						scrollTrigger: {
-							trigger: el,
-							start: `-=${$(el).height() * 2.4} center`,
-							end: `-=${$(el).height() * 1.8} center`,
-							scrub: 1.5,
-							fastScrollEnd: true,
-							invalidateOnRefresh: !0,
-							// markers: true
-						}
-					}).add(function () {
-						if (i !== 3) {
-							projectsDeskTimeline.to(el, {
-								startAt: { y: "0rem" },
-								y: "-60rem",
-								scrollTrigger: {
-									trigger: el,
-									start: "-5% center",
-									end: "15% center",
-									scrub: 3,
-									invalidateOnRefresh: !0,
-									// markers: true
-								}
-							})
-						}
-						return (projectsDeskTimeline)
-					})
-				}
-			});
-
-			return projectsDeskTimeline;
 		})
+		// .from('.main-projects__content-left', {
+		// 	y: "20rem",
+		// 	scrollTrigger: {
+		// 		trigger: '.main-projects',
+		// 		start: "-10% center",
+		// 		end: "-2% center",
+		// 		scrub: 3,
+		// 	}
+		// }).from('.main-projects__content-right', {
+		// 	y: "20rem",
+		// 	scrollTrigger: {
+		// 		trigger: '.main-projects',
+		// 		start: "-2% center",
+		// 		end: "6% center",
+		// 		scrub: 3,
+		// 	}
+		// }).add(function () {
+		// 	projectsItemsLeft.slice(0, 4).forEach((el, i) => {
+		// 		if (i === 0) {
+		// 			projectsDeskTimeline.to(el, {
+		// 				y: "-60rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: "50% center",
+		// 					end: "70% center",
+		// 					scrub: 3,
+		// 					invalidateOnRefresh: !0,
+		// 					// markers: true,
+		// 				}
+		// 			})
+		// 		} else {
+		// 			projectsDeskTimeline.from(el, {
+		// 				y: "20rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: `-=${$(el).height() * 2} center`,
+		// 					end: `-=${$(el).height() * 1.4} center`,
+		// 					scrub: 1,
+		// 					fastScrollEnd: true,
+		// 					invalidateOnRefresh: !0,
+		// 				}
+		// 			}).add(function () {
+		// 				if (i !== 3) {
+		// 					projectsDeskTimeline.fromTo(el, { y: "0rem" }, {
+		// 						y: "-60rem",
+		// 						scrollTrigger: {
+		// 							trigger: el,
+		// 							start: "35% center",
+		// 							end: "55% center",
+		// 							scrub: 3,
+		// 							invalidateOnRefresh: !0,
+		// 							// markers: true
+		// 						}
+		// 					})
+		// 				}
+		// 				return (projectsDeskTimeline)
+		// 			})
+		// 		}
+		// 	});
+
+		// 	projectsItemsRight.slice(0, 4).forEach((el, i) => {
+		// 		if (i === 0) {
+		// 			projectsDeskTimeline.to(el, {
+		// 				y: "-60rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: "10% center",
+		// 					end: "30% center",
+		// 					scrub: 3,
+		// 					// markers: true
+		// 					invalidateOnRefresh: !0,
+		// 				}
+		// 			})
+		// 		} else {
+		// 			projectsDeskTimeline.from(el, {
+		// 				y: "20rem",
+		// 				scrollTrigger: {
+		// 					trigger: el,
+		// 					start: `-=${$(el).height() * 2.4} center`,
+		// 					end: `-=${$(el).height() * 1.8} center`,
+		// 					scrub: 1.5,
+		// 					fastScrollEnd: true,
+		// 					invalidateOnRefresh: !0,
+		// 					// markers: true
+		// 				}
+		// 			}).add(function () {
+		// 				if (i !== 3) {
+		// 					projectsDeskTimeline.to(el, {
+		// 						startAt: { y: "0rem" },
+		// 						y: "-60rem",
+		// 						scrollTrigger: {
+		// 							trigger: el,
+		// 							start: "-5% center",
+		// 							end: "15% center",
+		// 							scrub: 3,
+		// 							invalidateOnRefresh: !0,
+		// 							// markers: true
+		// 						}
+		// 					})
+		// 				}
+		// 				return (projectsDeskTimeline)
+		// 			})
+		// 		}
+		// 	});
+
+		// 	return projectsDeskTimeline;
+		// })
+
 		$('.main-projects__content-item--btn').on('click', function (evt) {
 			evt.preventDefault();
 			if ($(this).hasClass('active')) {
@@ -239,7 +241,6 @@ $(document).ready(function () {
 						$(el).css('display', 'none');
 					}, 1000)
 				})
-				$(this).text(`Show more`).append(`<span></span>`)
 			} else {
 				ScrollTrigger.refresh()
 				$(this).addClass('active');
@@ -249,7 +250,6 @@ $(document).ready(function () {
 						$(el).css('max-height', 51 * $(this).find('.main-projects__content-item').length + 'rem');
 					}, 0)
 				});
-				$(this).text(`Close`).append(`<span></span>`)
 			}
 		})
 	}
@@ -265,7 +265,6 @@ $(document).ready(function () {
 					mainProjectsAnimMobile()
 					content.css('display', 'none');
 				}, 1000)
-				$(this).text(`Show more`).append(`<span></span>`)
 			} else {
 				$(this).addClass('active');
 				content.css('display', 'flex');
@@ -274,7 +273,6 @@ $(document).ready(function () {
 					mainProjectsAnimMobile()
 					content.css('max-height', 51 * content.find('.main-projects__content-item').length + 'rem');
 				}, 0)
-				$(this).text(`Close`).append(`<span></span>`)
 			}
 		})
 	}
