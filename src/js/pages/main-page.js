@@ -88,7 +88,7 @@ $(document).ready(function () {
 		projectsImages.forEach(el => {
 			return gsap.to(el, {
 				startAt: { objectPosition: "50% 80%" },
-				objectPosition: "50% 20%",
+				objectPosition: "50% 50%",
 				scrollTrigger: {
 					trigger: el,
 					start: `top bottom`,
