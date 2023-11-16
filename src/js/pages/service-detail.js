@@ -48,16 +48,15 @@ $(document).ready(function () {
 	});
 
 	function serviceBannerAnimDesk() {
+		const img = document.querySelectorAll('.services-banner__cards-img');
+
 		$('.services-banner__list button').each(function (i, el) {
 			$(el).on('click', function (evt) {
 				$('.services-banner__list li').each(function (i, el) {
 					$(el).removeClass('active');
 				});
-				$('.services-banner__cards .services-banner__cards-img').each(function (i, el) {
-					$(el).removeClass('active');
-				});
 				$(this).parent('li').addClass('active');
-				$('.services-banner__cards .services-banner__cards-img')[i].classList.add('active')
+				img[i].scrollIntoView({ block: "nearest", behavior: "smooth", inline: "start" })
 			})
 		})
 	}
@@ -213,7 +212,7 @@ $(document).ready(function () {
 		serviceImages.forEach(el => {
 			return gsap.to(el, {
 				startAt: { objectPosition: "50% 80%" },
-				objectPosition: "50% 20%",
+				objectPosition: "50% 50%",
 				scrollTrigger: {
 					trigger: el,
 					start: `top bottom`,
