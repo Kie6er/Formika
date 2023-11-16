@@ -62,16 +62,13 @@ $(document).ready(function () {
 			}
 		});
 
-		wedoCards.slice(1).forEach((card, i) => {
-			wedoCardsTimeline.fromTo(card, { yPercent: 0 }, {
-				yPercent: -100,
-				duration: 0.5,
-			});
+		wedoCardsTimeline.to('.about-wedo__cards-wrapper', {
+			yPercent: (wedoCards.length - 1) * -25,
 		});
 
 		listItems.forEach((item, j) => {
 			if (listItems[j - 1]) {
-				listTimeline.set(item, { color: "#785b08" }, j).set(
+				listTimeline.set(item, { color: "#785b08" }, j * 0.45).set(
 					listItems[j - 1],
 					{ color: "#1d1d1d" },
 					"<"
@@ -83,7 +80,7 @@ $(document).ready(function () {
 
 		listTimeline.set(
 			listItems[listItems.length - 1],
-			{ color: "#1d1d1d" },
+			{ color: "#785b08" },
 			0.5 * listItems.length
 		).to({}, {});
 	}
