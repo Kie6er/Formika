@@ -15,8 +15,8 @@ $(document).ready(function () {
 	ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: "DOMContentLoaded,load,resize" });
 	const aboutPageMm = gsap.matchMedia();
 	aboutPageMm.add("(min-width: 769px)", () => { // desktop
-		$('.services-banner').length > 0 && ScrollTrigger.isTouch !== 1 ? serviceBannerAnimDesk() : null;
-		if ($('.services-cases').length > 0 && ScrollTrigger.isTouch !== 1) {
+		$('.services-banner').length > 0 ? serviceBannerAnimDesk() : null;
+		if ($('.services-cases').length > 0) {
 			serviceProjectsAnimDesktop();
 			serviceProjectsAnimMobile();
 
