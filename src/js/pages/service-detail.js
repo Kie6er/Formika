@@ -59,6 +59,8 @@ $(document).ready(function () {
 				img[i].scrollIntoView({ block: "nearest", behavior: "smooth", inline: "start" })
 			})
 		})
+
+
 	}
 	function serviceProjectsAnimDesktop() {
 		const serviceDeskTimeline = gsap.timeline();
