@@ -18,6 +18,7 @@ $(document).ready(function () {
 
 	$('.modal-back').on('click', closeModal);
 	$('.modal-exit').on('click', closeModal);
+	$('.request-modal__btn').on('click', closeModal);
 
 	function closeModal() {
 		$('body').removeClass('lock');

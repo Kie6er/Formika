@@ -6,6 +6,19 @@
 		justify-content: space-between;
 		gap: 6.8rem;
 	}
+	&__title-bottom {
+		margin-left: 14rem;
+	}
+	&__btn {
+		color: $brown;
+
+		span {
+			box-shadow: inset 0 0 0 0.3rem $brown;
+			&::after {
+				background: $brown;
+			}
+		}
+	}
 	// .request-modal__form
 	&__form {
 		width: 41.3rem;
@@ -78,6 +91,9 @@
 		&--first {
 			width: 59.7rem;
 		}
+		&--second {
+			align-items: center;
+		}
 	}
 }
 
@@ -87,6 +103,14 @@
 		&__content {
 			gap: 6.4rem;
 		}
+		&__title-bottom {
+			margin-left: 12rem;
+		}
+		&__btn {
+			span {
+				box-shadow: inset 0 0 0 0.4rem $brown;
+			}
+		}
 		// .request-modal__form
 		&__form {
 			width: 100%;
@@ -95,7 +119,7 @@
 	.modal {
 		&-wrapper {
 			width: 68.6rem;
-			height: auto;
+			height: 96.4rem;
 			padding: 18.4rem 3.2rem;
 			&::after {
 				background: url(./assets/images/logo-black.svg) center 50% / 65.8rem no-repeat;
@@ -108,13 +132,6 @@
 			height: 6.4rem;
 		}
 		&-content {
-			display: none;
-			visibility: hidden;
-
-			&.active {
-				display: flex;
-				visibility: visible;
-			}
 			&--first {
 				width: 100%;
 			}
