@@ -10,6 +10,7 @@ import "./index.scss";
 import "./js/components/header";
 import "./js/components/form";
 import "./js/components/file";
+import "./js/components/modal";
 import "./js/pages/main-page";
 import "./js/pages/project-detail";
 import "./js/pages/service-detail";

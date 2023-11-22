@@ -18,10 +18,6 @@ $(document).ready(function () {
 		$('.about-circles').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutCirclesAnimDesk() : null;
 		$('.about-wedo').length > 0 && ScrollTrigger.isTouch !== 1 ? aboutWedoAnimDesk() : null;
 	});
-	aboutPageMm.add("(max-width: 768px)", () => { // mobile
-		// $('.main-solutions').length > 0 ? mainSolutionAnimMobile() : null;
-		// $('.main-projects').length > 0 ? mainProjectsAnimMobile() : null;
-	});
 
 	function aboutCirclesAnimDesk() {
 		return gsap.from('.circle-item', {

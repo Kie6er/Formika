@@ -5,18 +5,27 @@ $(document).ready(function () {
 		evt.preventDefault();
 		if (validationForm($(evt.currentTarget)) === true) {
 
-			// if ($('.modal').hasClass('active')) {
-			// 	switchModalContent()
-			// } else {
-			// 	$('.modal').addClass('active');
-			// 	$('body').addClass('lock');
-			// 	switchModalContent()
-			// }
+			if ($('.modal').hasClass('active')) {
+				switchModalContent()
+			} else {
+				$('.modal').addClass('active');
+				$('body').addClass('lock');
+				setTimeout(() => {
+					$(".modal-wrapper").css("opacity", "1");
+					$(".modal-back").css("opacity", "1");
+				}, 0);
+				switchModalContent()
+			}
 
 			$(evt.currentTarget).find('input').val('');
 			$(evt.currentTarget).find('textarea').val('');
 		};
 	});
+
+	function switchModalContent() {
+		$('.modal').find('.modal-content--first').removeClass('active');
+		$('.modal').find('.modal-content--second').addClass('active');
+	}
 
 	function validationForm(form) {
 		let result = true;
