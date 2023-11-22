@@ -6,12 +6,6 @@
 		justify-content: space-between;
 		gap: 6.8rem;
 	}
-	// .request-modal__header
-	&__header {
-	}
-	// .request-modal__title
-	&__title {
-	}
 	// .request-modal__form
 	&__form {
 		width: 41.3rem;
@@ -83,6 +77,47 @@
 		}
 		&--first {
 			width: 59.7rem;
+		}
+	}
+}
+
+@media (max-width: 48em) {
+	.request-modal {
+		// .request-modal__content
+		&__content {
+			gap: 6.4rem;
+		}
+		// .request-modal__form
+		&__form {
+			width: 100%;
+		}
+	}
+	.modal {
+		&-wrapper {
+			width: 68.6rem;
+			height: auto;
+			padding: 18.4rem 3.2rem;
+			&::after {
+				background: url(./assets/images/logo-black.svg) center 50% / 65.8rem no-repeat;
+			}
+		}
+		&-exit {
+			top: 4rem;
+			right: 4rem;
+			width: 6.4rem;
+			height: 6.4rem;
+		}
+		&-content {
+			display: none;
+			visibility: hidden;
+
+			&.active {
+				display: flex;
+				visibility: visible;
+			}
+			&--first {
+				width: 100%;
+			}
 		}
 	}
 }
