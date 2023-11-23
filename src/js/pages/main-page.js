@@ -310,7 +310,6 @@ $(document).ready(function () {
 				e.querySelector('video').load();
 			}, 500)
 		}
-
 	};
 
 	// Карта
