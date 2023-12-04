@@ -313,13 +313,71 @@ $(document).ready(function () {
 	};
 
 	// Карта
+	const markers = [
+		{
+			coordinate: [2.4, 50],
+			active: false,
+		},
+		{
+			coordinate: [7.4, 47.8],
+			active: false,
+		},
+		{
+			coordinate: [13, 68.2],
+			active: false,
+		},
+		{
+			coordinate: [33.7, 63.4],
+			active: false,
+		},
+		{
+			coordinate: [29.5, 78.1],
+			active: false,
+		},
+		{
+			coordinate: [30.4, 83.2],
+			active: true,
+		},
+		{
+			coordinate: [16.3, 100],
+			active: false,
+		},
+		{
+			coordinate: [7.7, 96.7],
+			active: false,
+		}
+	]
+	let markerContainer = document.querySelector('.main-map__map-marks');
+
+	markers.forEach(el => {
+		let marker = document.createElement('div');
+		$(marker).addClass(`main-map__map-marks--item ${el.active ? 'active' : ' '}`);
+		marker.insertAdjacentHTML('beforeend', `
+			<div class="main-map__map-marks--wrapper">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 61" fill="none">
+					<path
+						d="M36.9634 27.8795C36.9634 32.9003 32.8985 36.9671 27.8656 36.9671C22.7461 36.9671 18.6227 32.7357 18.7901 27.5782C18.9463 22.8001 22.8745 18.9007 27.6563 18.7947C32.7869 18.6747 36.9634 22.789 36.9634 27.8795Z"
+						fill="#785B08" />
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M0 27.8765C0 12.4738 12.4708 0 27.8682 0C43.2767 0 55.7587 12.4738 55.7587 27.8765C55.7587 40.9159 46.8098 51.8556 34.7127 54.9028L27.8189 61L20.8831 54.8657C8.86913 51.7676 0 40.8635 0 27.8765ZM10.0101 27.8765C10.0101 37.7479 18.0031 45.7393 27.8682 45.7393C37.7276 45.7393 45.7485 37.7507 45.7485 27.8765C45.7485 17.9995 37.7304 10.0109 27.8682 10.0109C18.0031 10.0109 10.0101 17.9995 10.0101 27.8765Z"
+						fill="#785B08" />
+				</svg>
+			</div>
+		`);
+		if (window.outerWidth > 768) {
+			$(marker).css('top', `${el.coordinate[0]}rem`)
+			$(marker).css('left', `${el.coordinate[1]}rem`)
+		} else {
+			$(marker).css('top', `${el.coordinate[0] * 1.6 - 3}rem`)
+			$(marker).css('left', `${el.coordinate[1] * 1.6 + 5}rem`)
+		}
+		$(markerContainer).append(marker);
+	})
+
 	let mapTarget = $('.main-map__map-marks--item');
 	let overflowBlockMap = document.querySelector('.main-map__map');
-
 	mapTarget.on('mouseover', function (evt) {
-		mapTarget.each(function (index, el) {
-			$(el).removeClass('active');
-		})
+		mapTarget.removeClass('active')
 		$(evt.currentTarget).addClass('active');
 
 		if (window.outerWidth <= 768) {
