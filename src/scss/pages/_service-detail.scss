@@ -115,6 +115,15 @@
 	&__wrapper {
 		width: 106.8rem;
 	}
+	&__title {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 6.5rem;
+		span {
+			display: block;
+			margin-right: 23.3rem;
+		}
+	}
 	// .services-about__text
 	&__text {
 		color: $black;
@@ -128,6 +137,10 @@
 		display: flex;
 		flex-direction: column;
 		gap: 3.2rem;
+
+		&:not(:last-child) {
+			margin-bottom: 6.4rem;
+		}
 
 		li {
 			padding-left: 4.4rem;
@@ -151,6 +164,9 @@
 		}
 	}
 	&__list-text {
+		&:not(:last-child) {
+			margin-bottom: 6.4rem;
+		}
 		color: $black;
 		text-transform: uppercase;
 		display: flex;

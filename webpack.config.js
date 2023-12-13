@@ -20,6 +20,7 @@ const entryPoints = {
 	"service-detail-text": path.resolve(__dirname, "src", "index.js"),
 	404: path.resolve(__dirname, "src", "index.js"),
 	about: path.resolve(__dirname, "src", "index.js"),
+	sustainability: path.resolve(__dirname, "src", "index.js"),
 	// Добавьте другие страницы здесь
 };
 
@@ -252,6 +253,6 @@ module.exports = {
 				strict: true,
 			}),
 		],
-		minimize: true, // Отключение минификации
+		minimize: false, // Отключение минификации
 	},
 };
