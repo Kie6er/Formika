@@ -253,6 +253,6 @@ module.exports = {
 				strict: true,
 			}),
 		],
-		minimize: true, // Отключение минификации
+		minimize: false, // Отключение минификации
 	},
 };
