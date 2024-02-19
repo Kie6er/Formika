@@ -188,7 +188,11 @@
 			height: 100%;
 			border-radius: 50%;
 
-			background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+			background: linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0.2) 0%,
+					rgba(255, 255, 255, 0.2) 100%
+				),
 				linear-gradient(
 					107deg,
 					#b0913a -107.13%,
@@ -321,7 +325,11 @@
 			height: 100%;
 			border-radius: 50%;
 
-			background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+			background: linear-gradient(
+					0deg,
+					rgba(255, 255, 255, 0.2) 0%,
+					rgba(255, 255, 255, 0.2) 100%
+				),
 				linear-gradient(
 					107deg,
 					#b0913a -107.13%,
@@ -556,9 +564,7 @@
 			position: relative;
 			z-index: 2;
 			will-change: object-position;
-			transition:
-				transform 0.5s ease-in-out,
-				opacity 0.5s linear;
+			transition: transform 0.5s ease-in-out, opacity 0.5s linear;
 		}
 		video {
 			position: absolute;
@@ -580,7 +586,11 @@
 			z-index: 2;
 			top: 0;
 			left: 0;
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+			background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.3) 0%,
+				rgba(0, 0, 0, 0.3) 100%
+			);
 		}
 		&:hover {
 			img {
@@ -680,6 +690,7 @@
 		width: 78rem;
 		height: 34rem;
 		flex-shrink: 0;
+		filter: grayscale(1);
 	}
 	// .contacts-map__wrapper
 	&__wrapper {
@@ -858,7 +869,11 @@
 				height: 100%;
 				border-radius: 50%;
 
-				background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+				background: linear-gradient(
+						0deg,
+						rgba(255, 255, 255, 0.2) 0%,
+						rgba(255, 255, 255, 0.2) 100%
+					),
 					linear-gradient(
 						107deg,
 						#b0913a -107.13%,
