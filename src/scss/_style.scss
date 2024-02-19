@@ -197,6 +197,13 @@ body {
 	filter: grayscale(1);
 }
 
+.gmnoprint {
+	display: none !important;
+}
+.gm-style-cc {
+	display: none !important;
+}
+
 @media (max-width: 48em) {
 	@keyframes btnDots {
 		0% {

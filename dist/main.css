@@ -1,7 +1,6 @@
 @font-face {
 	font-family: "Montserrat";
-	src:
-		url(assets/fonts/Montserrat-Light.ttf) format("truetype"),
+	src: url(assets/fonts/Montserrat-Light.ttf) format("truetype"),
 		url(assets/fonts/Montserrat-Light.woff2) format("woff2"),
 		url(assets/fonts/Montserrat-Light.woff) format("woff");
 	font-weight: 300;
@@ -10,8 +9,7 @@
 }
 @font-face {
 	font-family: "Montserrat";
-	src:
-		url(assets/fonts/Montserrat-Bold.ttf) format("truetype"),
+	src: url(assets/fonts/Montserrat-Bold.ttf) format("truetype"),
 		url(assets/fonts/Montserrat-Bold.woff2) format("woff2"),
 		url(assets/fonts/Montserrat-Bold.woff) format("woff");
 	font-weight: 700;
@@ -20,8 +18,7 @@
 }
 @font-face {
 	font-family: "Montserrat";
-	src:
-		url(assets/fonts/Montserrat-Regular.ttf) format("truetype"),
+	src: url(assets/fonts/Montserrat-Regular.ttf) format("truetype"),
 		url(assets/fonts/Montserrat-Regular.woff2) format("woff2"),
 		url(assets/fonts/Montserrat-Regular.woff) format("woff");
 	font-weight: normal;
@@ -30,8 +27,7 @@
 }
 @font-face {
 	font-family: "Lobster";
-	src:
-		url(assets/fonts/Lobster-Regular.ttf) format("truetype"),
+	src: url(assets/fonts/Lobster-Regular.ttf) format("truetype"),
 		url(assets/fonts/Lobster-Regular.woff2) format("woff2"),
 		url(assets/fonts/Lobster-Regular.woff) format("woff");
 	font-weight: normal;
@@ -497,14 +493,10 @@ input[type="number"] {
 	left: 0;
 	z-index: 1000;
 	width: 100%;
-	transition:
-		background 0.5s linear,
-		padding 0.5s linear;
+	transition: background 0.5s linear, padding 0.5s linear;
 }
 .header.scroll {
-	transition:
-		background 0.5s linear,
-		padding 0.5s linear;
+	transition: background 0.5s linear, padding 0.5s linear;
 	background: rgba(255, 255, 255, 0.05);
 	-webkit-backdrop-filter: blur(2.4rem);
 	backdrop-filter: blur(2.4rem);
@@ -624,9 +616,7 @@ input[type="number"] {
 	.header__burger span {
 		transition: -webkit-transform 0.2s linear;
 		transition: transform 0.2s linear;
-		transition:
-			transform 0.2s linear,
-			-webkit-transform 0.2s linear;
+		transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 		display: block;
 		width: 5rem;
 		height: 0.4rem;
@@ -636,9 +626,7 @@ input[type="number"] {
 	.header__burger.active span:nth-child(1) {
 		transition: -webkit-transform 0.2s linear;
 		transition: transform 0.2s linear;
-		transition:
-			transform 0.2s linear,
-			-webkit-transform 0.2s linear;
+		transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 		-webkit-transform-origin: center;
 		transform-origin: center;
 		-webkit-transform: translateY(0.7rem) rotate(45deg);
@@ -650,9 +638,7 @@ input[type="number"] {
 	.header__burger.active span:nth-child(3) {
 		transition: -webkit-transform 0.2s linear;
 		transition: transform 0.2s linear;
-		transition:
-			transform 0.2s linear,
-			-webkit-transform 0.2s linear;
+		transition: transform 0.2s linear, -webkit-transform 0.2s linear;
 		-webkit-transform-origin: center;
 		transform-origin: center;
 		-webkit-transform: translateY(-0.7rem) rotate(-45deg);
@@ -670,18 +656,14 @@ input[type="number"] {
 		will-change: transform;
 		transition: -webkit-transform 0.7s ease-out;
 		transition: transform 0.7s ease-out;
-		transition:
-			transform 0.7s ease-out,
-			-webkit-transform 0.7s ease-out;
+		transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out;
 		-webkit-transform: translateY(-100%);
 		transform: translateY(-100%);
 	}
 	.header__burger-menu.active {
 		transition: -webkit-transform 0.7s ease-out;
 		transition: transform 0.7s ease-out;
-		transition:
-			transform 0.7s ease-out,
-			-webkit-transform 0.7s ease-out;
+		transition: transform 0.7s ease-out, -webkit-transform 0.7s ease-out;
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}
@@ -741,9 +723,7 @@ input[type="number"] {
 		height: 42.6rem;
 		border-radius: 50%;
 		background-color: #f8f8f8;
-		box-shadow:
-			0 0 0 20.4rem #fffefc,
-			0 0 0 44.4rem #f8f8f8;
+		box-shadow: 0 0 0 20.4rem #fffefc, 0 0 0 44.4rem #f8f8f8;
 		-webkit-transform: translate(-50%, -54%);
 		transform: translate(-50%, -54%);
 	}
@@ -1294,7 +1274,11 @@ input[type="number"] {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(255, 255, 255, 0.2) 100%
+		),
 		linear-gradient(
 			107deg,
 			#b0913a -107.13%,
@@ -1413,7 +1397,11 @@ input[type="number"] {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(255, 255, 255, 0.2) 100%
+		),
 		linear-gradient(
 			107deg,
 			#b0913a -107.13%,
@@ -1530,9 +1518,7 @@ input[type="number"] {
 .main-map__map-marks--item.active .main-map__map-marks--wrapper {
 	transition: -webkit-transform 0.4s ease-in-out;
 	transition: transform 0.4s ease-in-out;
-	transition:
-		transform 0.4s ease-in-out,
-		-webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 	-webkit-transform: scale(2.5);
 	transform: scale(2.5);
 	will-change: transform;
@@ -1542,9 +1528,7 @@ input[type="number"] {
 	transform-origin: center bottom;
 	transition: -webkit-transform 0.4s ease-in-out;
 	transition: transform 0.4s ease-in-out;
-	transition:
-		transform 0.4s ease-in-out,
-		-webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 	will-change: transform;
 }
 .main-map__map-bg {
@@ -1631,15 +1615,9 @@ input[type="number"] {
 	position: relative;
 	z-index: 2;
 	will-change: object-position;
-	transition:
-		opacity 0.5s linear,
-		-webkit-transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		opacity 0.5s linear;
-	transition:
-		transform 0.5s ease-in-out,
-		opacity 0.5s linear,
+	transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.5s linear;
+	transition: transform 0.5s ease-in-out, opacity 0.5s linear,
 		-webkit-transform 0.5s ease-in-out;
 }
 .main-projects__content-item video {
@@ -1661,14 +1639,16 @@ input[type="number"] {
 	z-index: 2;
 	top: 0;
 	left: 0;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.3) 0%,
+		rgba(0, 0, 0, 0.3) 100%
+	);
 }
 .main-projects__content-item:hover img {
 	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		-webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
@@ -1754,6 +1734,8 @@ input[type="number"] {
 	width: 78rem;
 	height: 34rem;
 	flex-shrink: 0;
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
 }
 .contacts-map__wrapper {
 	display: flex;
@@ -1901,7 +1883,11 @@ input[type="number"] {
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
-		background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+		background: linear-gradient(
+				0deg,
+				rgba(255, 255, 255, 0.2) 0%,
+				rgba(255, 255, 255, 0.2) 100%
+			),
 			linear-gradient(
 				107deg,
 				#b0913a -107.13%,
@@ -2343,7 +2329,11 @@ input[type="number"] {
 	top: 0;
 	left: 0;
 	z-index: 1;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.2) 0%,
+		rgba(0, 0, 0, 0.2) 100%
+	);
 }
 .project-video__content video {
 	width: 100%;
@@ -2524,9 +2514,7 @@ input[type="number"] {
 	height: 56.2rem;
 	border-radius: 50%;
 	background-color: #f8f8f8;
-	box-shadow:
-		0 0 0 27rem #fffefc,
-		0 0 0 58rem #f8f8f8;
+	box-shadow: 0 0 0 27rem #fffefc, 0 0 0 58rem #f8f8f8;
 }
 @media (max-width: 48em) {
 	.page-404__title {
@@ -2551,9 +2539,7 @@ input[type="number"] {
 	.page-404__overlay {
 		width: 40rem;
 		height: 40rem;
-		box-shadow:
-			0 0 0 19.6rem #fffefc,
-			0 0 0 41.8rem #f8f8f8;
+		box-shadow: 0 0 0 19.6rem #fffefc, 0 0 0 41.8rem #f8f8f8;
 	}
 }
 .about-banner__inner {
@@ -2621,9 +2607,7 @@ input[type="number"] {
 .circle-item:hover .circle-item__back {
 	transition: -webkit-transform 0.3s ease-in-out;
 	transition: transform 0.3s ease-in-out;
-	transition:
-		transform 0.3s ease-in-out,
-		-webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 	-webkit-transform: scale(1.2);
 	transform: scale(1.2);
 }
@@ -2661,9 +2645,7 @@ input[type="number"] {
 	border-radius: 49%;
 	transition: -webkit-transform 0.3s ease-in-out;
 	transition: transform 0.3s ease-in-out;
-	transition:
-		transform 0.3s ease-in-out,
-		-webkit-transform 0.3s ease-in-out;
+	transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 .circle-item__back::after {
 	content: "";
@@ -2688,7 +2670,11 @@ input[type="number"] {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%),
+	background: linear-gradient(
+			0deg,
+			rgba(255, 255, 255, 0.2) 0%,
+			rgba(255, 255, 255, 0.2) 100%
+		),
 		linear-gradient(
 			107deg,
 			#b0913a -107.13%,
@@ -2726,7 +2712,14 @@ input[type="number"] {
 	z-index: 3;
 }
 .circle-item__back-overlay--second {
-	-webkit-clip-path: polygon(0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%);
+	-webkit-clip-path: polygon(
+		0% 50%,
+		50% 50%,
+		50% 0%,
+		100% 0%,
+		100% 100%,
+		0% 100%
+	);
 	clip-path: polygon(0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .circle-item__back-overlay--third {
@@ -2795,9 +2788,7 @@ input[type="number"] {
 	height: 6.6rem;
 	border-radius: 50%;
 	background-color: #f8f8f8;
-	box-shadow:
-		0 0 0 3.1rem #fffefc,
-		0 0 0 6.7rem #f8f8f8;
+	box-shadow: 0 0 0 3.1rem #fffefc, 0 0 0 6.7rem #f8f8f8;
 }
 .about-wedo {
 	will-change: transform;
@@ -3094,9 +3085,7 @@ input[type="number"] {
 		height: 6.6rem;
 		border-radius: 50%;
 		background-color: #f8f8f8;
-		box-shadow:
-			0 0 0 3.1rem #fffefc,
-			0 0 0 6.7rem #f8f8f8;
+		box-shadow: 0 0 0 3.1rem #fffefc, 0 0 0 6.7rem #f8f8f8;
 	}
 	.about-wedo__inner {
 		display: flex;
@@ -3125,14 +3114,20 @@ input[type="number"] {
 		align-items: center;
 		justify-content: space-between;
 	}
-	.about-wedo__accordion-button.active .about-wedo__accordion-button--content strong {
+	.about-wedo__accordion-button.active
+		.about-wedo__accordion-button--content
+		strong {
 		color: #785b08;
 	}
-	.about-wedo__accordion-button.active .about-wedo__accordion-button--icon .plus {
+	.about-wedo__accordion-button.active
+		.about-wedo__accordion-button--icon
+		.plus {
 		opacity: 0;
 		visibility: hidden;
 	}
-	.about-wedo__accordion-button.active .about-wedo__accordion-button--icon .minus {
+	.about-wedo__accordion-button.active
+		.about-wedo__accordion-button--icon
+		.minus {
 		opacity: 1;
 		visibility: visible;
 	}
@@ -3434,15 +3429,9 @@ input[type="number"] {
 	position: relative;
 	z-index: 2;
 	will-change: object-position;
-	transition:
-		opacity 0.5s linear,
-		-webkit-transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		opacity 0.5s linear;
-	transition:
-		transform 0.5s ease-in-out,
-		opacity 0.5s linear,
+	transition: opacity 0.5s linear, -webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.5s linear;
+	transition: transform 0.5s ease-in-out, opacity 0.5s linear,
 		-webkit-transform 0.5s ease-in-out;
 }
 .services-cases__content-item video {
@@ -3464,14 +3453,16 @@ input[type="number"] {
 	z-index: 2;
 	top: 0;
 	left: 0;
-	background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.3) 0%,
+		rgba(0, 0, 0, 0.3) 100%
+	);
 }
 .services-cases__content-item:hover img {
 	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		-webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
 }
@@ -3791,9 +3782,7 @@ input[type="number"] {
 	left: 0.7rem;
 	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		-webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 .btn.vertical {
 	flex-direction: column;
@@ -3813,9 +3802,7 @@ input[type="number"] {
 .btn.hover span::after {
 	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		-webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 	-webkit-transform: translateX(2.5rem);
 	transform: translateX(2.5rem);
 }
@@ -3826,9 +3813,7 @@ input[type="number"] {
 .btn.hover.vertical span::after {
 	transition: -webkit-transform 0.5s ease-in-out;
 	transition: transform 0.5s ease-in-out;
-	transition:
-		transform 0.5s ease-in-out,
-		-webkit-transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 	-webkit-transform: translateY(2.4rem);
 	transform: translateY(2.4rem);
 }
@@ -3920,6 +3905,12 @@ body.lock {
 	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 }
+.gmnoprint {
+	display: none !important;
+}
+.gm-style-cc {
+	display: none !important;
+}
 @media (max-width: 48em) {
 	@-webkit-keyframes btnDots {
 		0% {
@@ -3998,9 +3989,7 @@ body.lock {
 		left: 1.2rem;
 		transition: -webkit-transform 0.5s ease-in-out;
 		transition: transform 0.5s ease-in-out;
-		transition:
-			transform 0.5s ease-in-out,
-			-webkit-transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 	}
 	.btn.vertical {
 		padding-right: 0;
@@ -4018,9 +4007,7 @@ body.lock {
 	.btn.hover span::after {
 		transition: -webkit-transform 0.5s ease-in-out;
 		transition: transform 0.5s ease-in-out;
-		transition:
-			transform 0.5s ease-in-out,
-			-webkit-transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 		-webkit-transform: translateX(3.6rem);
 		transform: translateX(3.6rem);
 	}
@@ -4031,9 +4018,7 @@ body.lock {
 	.btn.hover.vertical span::after {
 		transition: -webkit-transform 0.5s ease-in-out;
 		transition: transform 0.5s ease-in-out;
-		transition:
-			transform 0.5s ease-in-out,
-			-webkit-transform 0.5s ease-in-out;
+		transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 		-webkit-transform: translateY(3.6rem);
 		transform: translateY(3.6rem);
 	}
