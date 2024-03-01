@@ -780,12 +780,11 @@
 		</div>
 		<include src="./components/request-modal.html"></include>
 		<!-- V V V Добавить если нужна карта в контактах V V V -->
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVzWclwddGOJh2PAH6L9EbMBVLiVtRCRg&amp;callback=initMap"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoCgGcCiuHUonTHFpIghnEn-yBXVeFta4&callback=initMap"></script>
 		<script>
 			let map;
 
 			async function initMap() {
-				//@ts-ignore
 				const { Map } = await google.maps.importLibrary("maps");
 
 				map = new Map(document.querySelector(".contacts-map__map"), {
