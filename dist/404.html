@@ -1,201 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1" />
-		<title>404</title>
-		<script defer="defer" src="main4b2d6c445abf40f8671e.js"></script>
-		<link href="main.css" rel="stylesheet" />
-	</head>
-	<body>
-		<header class="header black">
-			<div class="header__container container">
-				<div class="header__inner">
-					<div class="header__logo">
-						<a class="white-logo" href="./main.html"
-							><img src="assets/images/logo-white.svg" alt="" /></a
-						><a class="black-logo" href="./main.html"
-							><img src="assets/images/logo-black.svg" alt=""
-						/></a>
-					</div>
-					<nav class="header__nav nav">
-						<a class="nav__link" href="#">about us</a>
-						<a class="nav__link" href="#">projects</a>
-						<a class="nav__link" href="#">contacts</a>
-						<a class="nav__link" href="#">service</a>
-					</nav>
-					<button class="header__btn" type="button" data-modal="request">
-						request a project
-					</button>
-					<button class="header__burger burger-btn">
-						<span></span> <span></span> <span></span>
-					</button>
-					<div class="header__burger-menu burger-menu">
-						<div class="burger-menu__inner">
-							<nav class="burger-menu__nav nav">
-								<a class="nav__link" href="#">about us</a>
-								<a class="nav__link" href="#">projects</a>
-								<a class="nav__link" href="#">contacts</a>
-								<a class="nav__link" href="#">service</a>
-							</nav>
-							<button
-								class="burger-menu__btn"
-								type="button"
-								data-modal="request"
-							>
-								request a project
-							</button>
-							<div class="burger-menu__overlay burger-menu-overlay"></div>
-						</div>
-					</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>404</title>
+<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body>
+	<header class="header black">
+		<div class="header__container container">
+			<div class="header__inner">
+				<div class="header__logo">
+					<a class="white-logo" href="./main.html"><img src="./assets/images/logo-white.svg" alt=""></a>
+					<a class="black-logo" href="./main.html"><img src="./assets/images/logo-black.svg" alt=""></a>
 				</div>
-			</div>
-		</header>
-		<div class="page">
-			<div class="content">
-				<section class="page-404">
-					<div class="page-404__inner">
-						<div class="page-404__wrapper">
-							<div class="page-404__title">404</div>
-							<div class="page-404__content">
-								<div class="page-404__subtitle">Page not found</div>
-								<div class="page-404__description">
-									This page does not exist or has been deleted
-								</div>
-								<a href="./main.html" class="page-404__btn btn hover"
-									>Home Page<span></span
-								></a>
-							</div>
-						</div>
-						<div class="page-404__overlay"></div>
-					</div>
-				</section>
-			</div>
-		</div>
-		<div class="request-modal modal">
-			<div class="modal-back"></div>
-			<div class="modal-wrapper">
-				<button class="modal-exit">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="48"
-						height="48"
-						viewBox="0 0 48 48"
-						fill="none"
-					>
-						<path
-							d="M12.125 35.875L35.8838 12.1162"
-							stroke="#727272"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-						<path
-							d="M35.8838 35.8838L12.125 12.125"
-							stroke="#727272"
-							stroke-width="1.5"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						/>
-					</svg>
+				<nav class="header__nav nav">
+					<a class="nav__link" href="#">about us</a>
+					<a class="nav__link" href="#">projects</a>
+					<a class="nav__link" href="#">contacts</a>
+					<a class="nav__link" href="#">service</a>
+				</nav>
+				<button class="header__btn" type="button" data-modal="request">request a project</button>
+				<button class="header__burger burger-btn">
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
-				<div
-					class="request-modal__content modal-content modal-content--first active"
-				>
-					<div class="request-modal__header">
-						<div class="request-modal__title h1">Request a project</div>
+				<div class="header__burger-menu burger-menu">
+					<div class="burger-menu__inner">
+						<nav class="burger-menu__nav nav">
+							<a class="nav__link" href="#">about us</a>
+							<a class="nav__link" href="#">projects</a>
+							<a class="nav__link" href="#">contacts</a>
+							<a class="nav__link" href="#">service</a>
+						</nav>
+						<button class="burger-menu__btn" type="button" data-modal="request">request a project</button>
+						<div class="burger-menu__overlay burger-menu-overlay"></div>
 					</div>
-					<form class="request-modal__form form">
-						<div class="form-main">
-							<label class="form-label"
-								><input class="input" placeholder="name" data-required="true"
-							/></label>
-							<label class="form-label"
-								><input
-									type="email"
-									class="input"
-									placeholder="email"
-									data-required="true"
-							/></label>
-							<label class="form-label"
-								><input
-									type="tel"
-									class="input"
-									placeholder="phone number"
-									data-required="true"
-									data-min-length="true"
-							/></label>
-							<label class="form-label"
-								><input class="input" placeholder="message"
-							/></label>
-						</div>
-						<div class="form__footer">
-							<label class="form-label"
-								><input
-									type="file"
-									class="input-file"
-									accept=".jpg, .jpeg, .png, .gif, .webp"
-									hidden />
-								<div class="custom-file">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="24"
-										height="24"
-										viewBox="0 0 24 24"
-										fill="none"
-									>
-										<path
-											d="M12.3297 12.1499L9.85969 14.6199C8.48969 15.9899 8.48969 18.1999 9.85969 19.5699C11.2297 20.9399 13.4397 20.9399 14.8097 19.5699L18.6997 15.6799C21.4297 12.9499 21.4297 8.50992 18.6997 5.77992C15.9697 3.04992 11.5297 3.04992 8.79969 5.77992L4.55969 10.0199C2.21969 12.3599 2.21969 16.1599 4.55969 18.5099"
-											stroke="#727272"
-											stroke-width="1.5"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-									<span>add file</span>
-								</div>
-								<div class="custom-preview">
-									<div class="custom-preview__icon">
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
-											viewBox="0 0 24 24"
-											fill="none"
-										>
-											<path
-												d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
-												stroke="#727272"
-												stroke-width="1.5"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-											<path
-												d="M7.75 12L10.58 14.83L16.25 9.16998"
-												stroke="#727272"
-												stroke-width="1.5"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									</div>
-									<div class="custom-preview__name"></div>
-									<div class="custom-preview__size"></div></div
-							></label>
-							<button class="btn hover">send<span></span></button>
-						</div>
-					</form>
-				</div>
-				<div class="request-modal__content modal-content modal-content--second">
-					<div class="request-modal__header">
-						<div class="request-modal__title-top h1">Your request</div>
-						<div class="request-modal__title-bottom h1">is submitted</div>
-					</div>
-					<button class="request-modal__btn btn hover">
-						back <span></span>
-					</button>
 				</div>
 			</div>
 		</div>
-	</body>
+	</header>
+	<div class="page">
+		<div class="content">
+			<section class="page-404">
+				<div class="page-404__inner">
+					<div class="page-404__wrapper">
+						<div class="page-404__title">404</div>
+						<div class="page-404__content">
+							<div class="page-404__subtitle">Page not found</div>
+							<div class="page-404__description">This page does not exist or has been deleted</div>
+							<a href="./main.html" class="page-404__btn btn hover">Home Page<span></span></a>
+						</div>
+					</div>
+					<div class="page-404__overlay"></div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="request-modal modal">
+	<div class="modal-back"></div>
+	<div class="modal-wrapper">
+		<button class="modal-exit">
+			<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+				<path d="M12.125 35.875L35.8838 12.1162" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="M35.8838 35.8838L12.125 12.125" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+			</svg>
+		</button>
+		<div class="request-modal__content modal-content modal-content--first active">
+			<div class="request-modal__header">
+				<div class="request-modal__title h1">Request a project</div>
+			</div>
+			<form class="request-modal__form form">
+				<div class="form-main">
+					<label class="form-label">
+						<input type="text" class="input" placeholder="name" data-required="true">
+					</label>
+					<label class="form-label">
+						<input type="email" class="input" placeholder="email" data-required="true">
+					</label>
+					<label class="form-label">
+						<input type="tel" class="input" placeholder="phone number" data-required="true" data-min-length="true">
+					</label>
+					<label class="form-label">
+						<input type="text" class="input" placeholder="message">
+					</label>
+				</div>
+				<div class="form__footer">
+					<label class="form-label">
+						<input type="file" class="input-file" accept=".jpg, .jpeg, .png, .gif, .webp" hidden="">
+						<div class="custom-file">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+								<path d="M12.3297 12.1499L9.85969 14.6199C8.48969 15.9899 8.48969 18.1999 9.85969 19.5699C11.2297 20.9399 13.4397 20.9399 14.8097 19.5699L18.6997 15.6799C21.4297 12.9499 21.4297 8.50992 18.6997 5.77992C15.9697 3.04992 11.5297 3.04992 8.79969 5.77992L4.55969 10.0199C2.21969 12.3599 2.21969 16.1599 4.55969 18.5099" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+							</svg>
+							<span>add file</span>
+						</div>
+						<div class="custom-preview">
+							<div class="custom-preview__icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+									<path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+									<path d="M7.75 12L10.58 14.83L16.25 9.16998" stroke="#727272" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+								</svg>
+							</div>
+							<div class="custom-preview__name"></div>
+							<div class="custom-preview__size"></div>
+						</div>
+					</label>
+					<button class="btn hover">send<span></span></button>
+				</div>
+			</form>
+		</div>
+		<div class="request-modal__content modal-content modal-content--second">
+			<div class="request-modal__header">
+				<div class="request-modal__title-top h1">Your request</div>
+				<div class="request-modal__title-bottom h1">is submitted</div>
+			</div>
+			<button class="request-modal__btn btn hover">back <span></span></button>
+		</div>
+	</div>
+</div>
+</body>
+
 </html>
